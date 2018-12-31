@@ -124,6 +124,7 @@ package object basic {
      * Scala 访问修饰符基本和Java的一样，分别有：private，protected，public。
      * 如果没有指定访问修饰符符，默认情况下，Scala 对象的访问级别都是 public。
      * Scala 中的 private 限定符，比 Java 更严格，在嵌套类情况下，外层类不能访问被嵌套类的私有成员。（内部可以访问外层的私有，不如内部/层就没意义了。。。）
+     *
      * @see ObjectsAndClasses.scala->OutPrivateClass.scala | TestInnerPrivateClass.scala
      **/
 
@@ -163,6 +164,8 @@ package object basic {
      * }
      * 如果函数没有返回值，可以返回为 Unit，这个类似于 Java 的 void，return可以省略，默认返回最后一个表达式（计算）的值，
      * 返回为空的称作过程，我们只是使用它的副作用，如打印
+     *
+     * 函数内部定义的函数只能在当前作用域被访问，且可以使用外部函数的参数，内部函数可以用于替代private函数【方法是特殊的属于对象成员的函数】
      * */
 
     /** 6、函数调用 @see Test3.scala
@@ -242,6 +245,10 @@ object Test2 extends App {
     val str = "hello" +
       "world"; //+操作符放在末尾，而不是java那样推荐在前面
     Console println str
+
+    println {
+        "hello"
+    } //只有一个参数的方法调用可以使用花括号
 
 
     // string.chars().anyMatch((int ch)-> Character.isUpperCase((char)ch)) //java 8
@@ -373,6 +380,37 @@ object Test8 extends App {
     //以少的为基准，不够舍弃
     val scores = list.zip(valus).toMap //list作为key,values作为value
     scores foreach { case (k, v) => println(k + v) }
+
+}
+
+/**
+ * P138 例子
+ *
+ * 函数式输出乘法表
+ */
+object PrintMultiTable extends App {
+
+    val ret = multiTable()
+
+    println {
+        ret
+    }
+
+
+    def makeRowSeq(row: Int) =
+        for (col <- 1 to 10) yield {
+            val prod = (row * col).toString
+            val padding = " " * (4 - prod.length)
+            padding + prod
+        }
+
+    def makeRow(row: Int) = makeRowSeq(row).mkString
+
+    def multiTable() = {
+        val tableSqe = for (row <- 1 to 10) yield makeRow(row)
+
+        tableSqe.mkString("\n")
+    }
 
 }
 
