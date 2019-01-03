@@ -202,7 +202,7 @@ package object basic {
      * Scala的集合和映射(map) @see Test8.scala
      * Scala的可变集合主要用于命令式传统编程（当Java用），不可变主要用于函数式编程，推荐使用不可变，减少副作用，也更加安全 @see immutable.png、mutable.png
      * Scala从文件读取 @see IOExamples.scala、Test10.scala、Test11.scala
-     * Scala 面向对象的类、单例对象、构造函数、序列化、注解、重写、重载等  @see ObjectsAndClasses.scala FunctionObjects.scala
+     * Scala 面向对象的类、单例对象、构造函数、序列化、注解、重写、重载、函数字面量等  @see ObjectsAndClasses.scala FunctionObjects.scala Function.scala
      * Scala基础语法图解 @see Scala语法图解.png  （已经取得作者本人同意）
      **/
 

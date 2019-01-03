@@ -87,3 +87,58 @@ object TestRantional extends App {
 
 
 }
+
+/**
+ * 函数字面量与部分应用函数
+ */
+object Function extends App {
+
+    //函数字面量，一等函数
+    val list = List(1, 2, 3, 4, 5, 6, 5)
+    val f = (x: Int) => x > 5 // 函数是一个值
+    val ret = list.filter(x => x > 5) //(x:Int) => x >5 缩写去掉类型。隐藏了目标的类型推断。整个filter接受一个函数字面量
+    val ret2 = list.filter(f)
+    for (r <- ret) {
+        println(r)
+    }
+    for (r <- ret2) {
+        println(r)
+    }
+    //以上效果一样
+    //更新省略，精简的写法
+    // _ 表示占位符
+    val ret3 = list.filter(_ > 5)
+    for (r <- ret3) {
+        println(r)
+    }
+    // _>5写成独立的函数会编译不过，因为无法确定类型
+    //必须指明类型，且括号不能省略
+    val ff = (_: Int) > 5
+    // 打印
+    println(ff)
+    //cn.edu.jxnu.scala.basic.Function$$$Lambda$18/4226387@18c7aca
+    val ret4 = list.filter(ff)
+    for (r <- ret4) {
+        println(r)
+    }
+
+    //当使用下划线时，实际是编写一个部分应用的函数，当传入任何需要的参数时，实际是将该函数应用到这些参数上
+    //部分应用的函数是一个表达式，可给出部分或者不给出任何参数
+    def sum(a: Int, b: Int) = a + b
+
+    //fun是一个函数值，它有sum函数的引用
+    val fun = sum _
+    val fun2 = sum(1, _: Int) //给出一个默认
+    println(fun(2, 3)) //底层调用了 fun.apply(2,3) apply方法由编译器自动生成[实际是在混入了2个参数的Function2特质的函数类里面]
+    // sum方法缺失2个参数，所以apply方法含有2个参数
+
+}
+
+/**
+ * 其他函数特性
+ *
+ * 闭包
+ */
+object Function extends App {
+
+}
