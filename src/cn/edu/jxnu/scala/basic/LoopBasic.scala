@@ -13,7 +13,7 @@ import scala.util.control.Breaks._
  * 5. Scala的for是for表达式，更接近函数式
  * 6. 纯函数式for：list.foreach(println) @see loopTest.scala
  */
-object LoopExamples {
+object LoopBasic {
     //这种是独立对象
 
     //普通遍历整形数组@see Test4.scala
@@ -102,4 +102,13 @@ object LoopExamples {
         next(0)
     }
 
+    //Scala赋值语句返回的不是赋值的那个值而是（）
+    var line = ""
+    while ((line = readLine()) != "") {
+        //这样永远是（）！=“”
+        println(line)
+    }
+
+    //需要在外部赋值初始化，并在while里面进行更新
+    //因为while没有返回值，并且使用了var变量，实际上函数式语言并不推荐。可以使用尾递归替代
 }

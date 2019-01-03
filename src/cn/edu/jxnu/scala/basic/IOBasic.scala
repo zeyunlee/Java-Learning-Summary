@@ -6,9 +6,9 @@ import scala.io.Source
  * 从文件读取行，文件写入使用Java IO
  *
  * 从命令行运行不用加包名
- * scala IOExamples.scala IOExamples.scala 后面一个是参数
+ * scala IOBasic.scala IOBasic.scala 后面一个是参数
  */
-object IOExamples {
+object IOBasic {
 
     val file = "D:\\git_project\\Java-Learning-Summary\\src\\cn\\edu\\jxnu\\scala\\basic\\IOExamples.scala"
     val liness = Source.fromFile(file).getLines().toList

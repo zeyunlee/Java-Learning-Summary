@@ -125,7 +125,7 @@ package object basic {
      * 如果没有指定访问修饰符符，默认情况下，Scala 对象的访问级别都是 public。
      * Scala 中的 private 限定符，比 Java 更严格，在嵌套类情况下，外层类不能访问被嵌套类的私有成员。（内部可以访问外层的私有，不如内部/层就没意义了。。。）
      *
-     * @see ObjectsAndClasses.scala->OutPrivateClass.scala | TestInnerPrivateClass.scala
+     * @see ObjectBasic.scala->OutPrivateClass.scala | TestInnerPrivateClass.scala
      **/
 
     /** 在 scala 中，对保护（Protected）成员的访问比 java 更严格一些。因为它只允许保护成员在定义了该成员的的类的子类中被访问。
@@ -194,15 +194,15 @@ package object basic {
      **/
     /**
      * Scala的main方法执行 @see SingletonObject.scala、Test2.scala
-     * Scala的for循环中断和List的交并差 @see LoopExamples.scala
+     * Scala的for循环中断和List的交并差 @see LoopBasic.scala
      * Scala的数组 @see Test3.scala、Test4.scala
      * Scala中的方法调用 操作符表示法 @see Test4.scala
      * Scala的列表 @see Test6.scala
      * Scala的元组 @see Test7.scala
      * Scala的集合和映射(map) @see Test8.scala
      * Scala的可变集合主要用于命令式传统编程（当Java用），不可变主要用于函数式编程，推荐使用不可变，减少副作用，也更加安全 @see immutable.png、mutable.png
-     * Scala从文件读取 @see IOExamples.scala、Test10.scala、Test11.scala
-     * Scala 面向对象的类、单例对象、构造函数、序列化、注解、重写、重载、函数字面量等  @see ObjectsAndClasses.scala FunctionObjects.scala Function.scala
+     * Scala从文件读取 @see IOBasic.scala、Test10.scala、Test11.scala
+     * Scala 面向对象的类、单例对象、构造函数、序列化、注解、重写、重载、函数字面量等  @see ObjectBasic.scala FunctionObjects.scala Function.scala
      * Scala基础语法图解 @see Scala语法图解.png  （已经取得作者本人同意）
      **/
 
@@ -263,7 +263,7 @@ object Test3 extends App {
     arr.foreach(println)
 }
 
-//循环中断@see LoopExamples.scala
+//循环中断@see LoopBasic.scala
 object Test4 extends App {
 
     for (i <- 0 to 2) //to包含了右边界  to实际是(0).to(2)的缩写，to返回一种包含了0、1、2的序列。对于单参数方法的调用时  () . 可以被省略

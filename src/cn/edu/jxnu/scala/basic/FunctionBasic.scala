@@ -6,7 +6,7 @@ package cn.edu.jxnu.scala.basic
  * @author 梦境迷离
  * @time 2018-12-17
  */
-object FunctionObjects {
+object FunctionBasic {
 
 }
 
@@ -139,6 +139,55 @@ object Function extends App {
  *
  * 闭包
  */
-object Function extends App {
+object Function2 extends App {
+
+    val m = 1;
+    //引用外部变量
+    // 因为闭包实际捕获的是变量本身，所以m被修改后会体现到fun中，即闭包里面仍可以观察到闭包外面的m被修改后的值
+    //反过来闭包中对变量的修改，在闭包外也能看到
+    val fun = (x: Int) => x + m
+
+    val nums = List(1, 2, 3, 4, 5, 5, 3)
+
+    var sum = 0
+    nums.foreach(sum += _)
+
+    println(sum)
+
+    // (x: Int) => x + m  是一个闭包，每次m都是新传入的值
+    def sum(m: Int) = (x: Int) => x + m
+
+    // (x: Int) => x + m  是一个闭包，每次m都是固定值
+    def sum2(x: Int) = (x: Int) => x + m // 即使方法已经调用并返回了，但是scala编译器会重新组织安排，让被捕获的参数在堆上继续存活
+    //无论是val var 或者是参数
+
+}
+
+/**
+ * 其他函数特性
+ *
+ * 重复参数，带名参数，缺省参数
+ */
+object Function3 extends App {
+
+    //重复参数
+    def prt(args: String*) = for (arg <- args) println(arg)
+
+    prt("hello", "world")
+
+    val arr = Array("hello", "world")
+    //    prt(arr)//编译报错
+    prt(arr: _*) //OK，告诉编译器将arr的每个元素作为参数传进去，而不是将arr作为一个整体
+
+    //带名字参数,字面量/匿名函数不能使用带名参数
+    val su = (x: Int, y: Int) => x + y
+    //    val suu = su(y = 1, x = 2)
+
+    def sum(x: Int, y: Int) = x + y
+
+    val s = sum(y = 1, x = 2) //参数顺序不再固定
+
+    //缺省函数，y有默认值1
+    def sum2(x: Int, y: Int = 1) = x + y
 
 }
