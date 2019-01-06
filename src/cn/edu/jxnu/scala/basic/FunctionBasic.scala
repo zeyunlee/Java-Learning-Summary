@@ -190,4 +190,5 @@ object Function3 extends App {
     //缺省函数，y有默认值1
     def sum2(x: Int, y: Int = 1) = x + y
 
+
 }
