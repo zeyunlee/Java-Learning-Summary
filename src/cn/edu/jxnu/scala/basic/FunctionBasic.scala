@@ -1,5 +1,7 @@
 package cn.edu.jxnu.scala.basic
 
+import java.io.{File, PrintWriter}
+
 /**
  * 函数式对象即是：没有任何可变属性的对象
  *
@@ -189,6 +191,93 @@ object Function3 extends App {
 
     //缺省函数，y有默认值1
     def sum2(x: Int, y: Int = 1) = x + y
+
+}
+
+
+/**
+ * 控制抽象
+ * 柯里化与贷出模式
+ * 传名参数
+ */
+object Function4 extends App {
+
+    //柯里化
+    def sum(x: Int)(y: Int) = x + y
+
+    //sum与sum1效果一致，传入x=1，返回(y:Int)=>1+y 这个函数值，该函数值赋值给某个变量则该变量可以进行二次调用，如result(1)
+    def sum1(x: Int) = (y: Int) => x + y
+
+    //result此时是一个部分应用函数
+    val result = sum(2) _
+
+    //继续使用上面的部分应用函数，ret0=2+1
+    val ret0 = result(1)
+
+    //使用柯里化函数，ret=x+y=3
+    val ret = sum(1)(2)
+
+    //普通函数
+    def sum2(x: Int, y: Int) = x + y
+
+    //普通函数调用
+    val ret2 = sum2(1, 2)
+
+
+    // 贷出模式，不会忘记关闭流
+    def withPrintWriter(file: File, op: PrintWriter => Unit) = {
+        val writer = new PrintWriter(file)
+        try {
+            //将资源贷出给函数op
+            op(writer)
+        } finally {
+            //不再需要带入的资源了
+            writer.close()
+        }
+    }
+
+    //调用
+    withPrintWriter(
+        new File("text.txt"),
+        withPrintWriter => withPrintWriter.println {
+            //单个参数的方法可以使用花括号代替圆括号
+            new java.util.Date()
+        }
+    )
+
+    //使用柯里化定义贷出模式
+    def withPrintWriter2(file: File)(op: PrintWriter => Unit) = {
+        val writer = new PrintWriter(file)
+        try {
+            op(writer)
+        } finally {
+            writer.close()
+        }
+    }
+
+    //调用柯里化的贷出模式
+    val file = new File("test.txt")
+    withPrintWriter2(file) {
+        writer => writer.println(new java.util.Date())
+    }
+
+    //传名参数
+    // 只能用于参数声明，不能用于传名变量或传名字段
+    def arrert1(predicate: => Boolean) = if (!predicate) throw new AssertionError
+
+    //调用
+    arrert1(2 > 3)
+
+    //不使用传名参数
+    def arrert(predicate: () => Boolean) = if (!predicate()) throw new AssertionError
+
+    //直接传入Boolean，无法处理断言被禁用的特殊情况，断言被禁用将会看到表达式中的副作用，如：异常
+    //我觉得有时候这可能是一种好的方法
+    def arrert2(predicate: Boolean) = if (!predicate()) throw new AssertionError
+
+
+    //调用
+    arrert(() => 4 > 2)
 
 
 }
