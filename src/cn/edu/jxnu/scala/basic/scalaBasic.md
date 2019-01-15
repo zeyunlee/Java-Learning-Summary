@@ -4,21 +4,21 @@
 
 >[废话在前](#声明与废话在前)
 
->[基本概念](#1)
+>[前情提要 QAQ](#前情提要-QAQ)
 
->[小小小目录](#2)
+>[小小小目录](#小小小目录)
 
->[基础语法](#3)
+>[基础语法](#基础语法)
 
->[面向对象](#4)
+>[面向对象](#面向对象)
 
->[循环](#5)
+>[Scala循环](#Scala循环)
 
->[IO](#6)
+>[IO](#IO)
 
->[函数式与控制抽象](#7)
+>[函数式与控制抽象](#Scala函数式与抽象控制)
 
->[启动原理](#8)
+>[启动原理](#启动原理)
 
 #### 声明与废话在前 ####  
 
@@ -33,8 +33,6 @@
 《Scala编程第三版》、《响应式架构 消息模式Actor实现与Scala、Akka应用集成》，《快学Scala》入门 （不是很友好）
  
 #### 前情提要 QAQ ####
-
-<span id="1" target="_top">前情提要 QAQ</span> 
 
     /**
      * scala特点
@@ -209,8 +207,6 @@ Scala类型系统继承结构图
      
 #### 小小小目录 ####
      
-<span id="2">小小小目录</span> 
-
     /**
      * Scala的main方法执行 @see SingletonObject.scala、Test2.scala
      * Scala的for循环中断和List的交并差 @see LoopBasic.scala
@@ -234,9 +230,7 @@ Scala基本语法图解
 
 PS:每个markdown的Scala代码块原本是一个class，但是这样文件太多不方便查看，现已经被直接放到本md中。
 
-#### 以下开始都是代码实例（基础语法部分） ####
-
-<span id="3">基础语法</span>
+#### 基础语法 ####
 
 ```scala
 object Test1 {
@@ -453,9 +447,7 @@ object PrintMultiTable extends App {
 可变集合继承结构
 ![可变集合继承结构](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/scala/basic/mutable.png)
 
-#### 面向对象的类、单例对象、构造函数、序列化、注解使用等 ####
-
-<span id="4">面向对象</span>
+#### 面向对象 ####
 
 ```scala
 package cn.edu.jxnu.scala.basic
@@ -628,8 +620,6 @@ object TestInnerPrivateClass extends App {
 }
 ```
 #### Scala循环 ####
-
-<span id="5">循环</span>
 
 ```scala
 package cn.edu.jxnu.scala.basic
@@ -831,8 +821,6 @@ object Test11 extends App {
 }
 ```
 #### Scala函数式与抽象控制 ####
-
-<span id="7">函数式与控制抽象</span>
 
 ```scala
 package cn.edu.jxnu.scala.basic
