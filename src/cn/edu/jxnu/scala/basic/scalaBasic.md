@@ -4,21 +4,21 @@
 
 >[废话在前](#声明与废话在前)
 
->[前情提要 QAQ](#前情提要-QAQ)
+>[前情提要](#前情提要)
 
->[小小小目录](#小小小目录)
+>[小目录](#小目录)
 
->[基础语法](#基础语法)
+>[Scala 基础语法](#Scala-基础语法)
 
->[面向对象](#面向对象)
+>[Scala 面向对象](#Scala-面向对象)
 
->[Scala循环](#Scala循环)
+>[Scala 循环](#Scala-循环)
 
 >[Scala IO](#Scala-IO)
 
->[函数式与控制抽象](#Scala函数式与抽象控制)
+>[Scala 函数式与控制抽象](#Scala-函数式与抽象控制)
 
->[启动原理](#启动原理)
+>[Scala 启动原理](#Scala-启动原理)
 
 #### 声明与废话在前 ####  
 
@@ -32,7 +32,7 @@
 
 《Scala编程第三版》、《响应式架构 消息模式Actor实现与Scala、Akka应用集成》，《快学Scala》入门 （不是很友好）
  
-#### 前情提要 QAQ ####
+#### 前情提要 ####
 
     /**
      * scala特点
@@ -205,7 +205,7 @@ Scala类型系统继承结构图
      *  不可变数据结构、无副作用
      */
      
-#### 小小小目录 ####
+#### 小目录 ####
      
     /**
      * Scala的main方法执行 @see SingletonObject.scala、Test2.scala
@@ -447,7 +447,7 @@ object PrintMultiTable extends App {
 可变集合继承结构
 ![可变集合继承结构](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/scala/basic/mutable.png)
 
-#### 面向对象 ####
+#### Scala 面向对象 ####
 
 ```scala
 package cn.edu.jxnu.scala.basic
@@ -619,7 +619,7 @@ object TestInnerPrivateClass extends App {
     //PS:内部==内层==被嵌套类，外部==外层==嵌套类
 }
 ```
-#### Scala循环 ####
+#### Scala 循环 ####
 
 ```scala
 package cn.edu.jxnu.scala.basic
@@ -818,7 +818,7 @@ object Test11 extends App {
     println("Thanks,you just typed:" + line)
 }
 ```
-#### Scala函数式与抽象控制 ####
+#### Scala 函数式与抽象控制 ####
 
 ```scala
 package cn.edu.jxnu.scala.basic
@@ -1101,8 +1101,6 @@ object Function4 extends App {
 }
 ```
 #### Scala 启动原理 ####
-
-<span id="8">启动原理</span>
 
 ```scala
 package cn.edu.jxnu.scala.basic
