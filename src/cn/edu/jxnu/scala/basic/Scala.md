@@ -2,7 +2,7 @@
  
 #### 语法笔记 #### 
 
-[scala基础](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/scala/basic/scalaBasic.md)
+[Scala基础](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/scala/basic/scalaBasic.md)
 
 #### 应用实战 ####
 

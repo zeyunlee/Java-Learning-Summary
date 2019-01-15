@@ -12,9 +12,9 @@
 
 >[Scala 面向对象](#Scala-面向对象)
 
->[Scala 循环](#Scala-循环)
+>[Scala 循环结构](#Scala-循环结构)
 
->[Scala IO](#Scala-IO)
+>[Scala IO](#Scala-IO操作)
 
 >[Scala 函数式与控制抽象](#Scala-函数式与抽象控制)
 
@@ -230,7 +230,7 @@ Scala基本语法图解
 
 PS:每个markdown的Scala代码块原本是一个class，但是这样文件太多不方便查看，现已经被直接放到本md中。
 
-#### 基础语法 ####
+#### Scala 基础语法 ####
 
 ```scala
 object Test1 {
@@ -619,7 +619,7 @@ object TestInnerPrivateClass extends App {
     //PS:内部==内层==被嵌套类，外部==外层==嵌套类
 }
 ```
-#### Scala 循环 ####
+#### Scala 循环结构 ####
 
 ```scala
 package cn.edu.jxnu.scala.basic
@@ -737,7 +737,7 @@ object LoopBasic {
     //因为while没有返回值，并且使用了var变量，实际上函数式语言并不推荐。可以使用尾递归替代
 }
 ``` 
-#### Scala IO ####
+#### Scala IO操作 ####
 
 ```scala
 package cn.edu.jxnu.scala.basic
