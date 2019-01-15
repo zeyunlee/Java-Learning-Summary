@@ -4,13 +4,19 @@
 
 [Scala基础](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/scala/basic/scalaBasic.md)
 
-#### 应用实战 ####
+#### 应用实践 ####
+
+[Scala User Group](https://github.com/jxnu-liguobin/csug)
 
 loading
 
 #### 项目 ####
 
 [Scala秒杀系统](https://github.com/jxnu-liguobin/SpringBoot-SecKill-Scala)
+
+[自動化測試平台](https://github.com/LightSwordSpringBoot/lightsword)
+
+[Circumflex — lightweight Scala-based Web framework and ORM](https://github.com/jxnu-liguobin/circumflex)
 
 loading
 
