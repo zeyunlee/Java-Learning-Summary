@@ -6,7 +6,7 @@
 
 >[前情提要](#前情提要)
 
->[小目录](#小目录)
+>[class 小目录](#class-小目录)
 
 >[Scala 基础语法](#Scala-基础语法)
 
@@ -14,7 +14,7 @@
 
 >[Scala 循环结构](#Scala-循环结构)
 
->[Scala IO](#Scala-IO操作)
+>[Scala IO操作](#Scala-IO操作)
 
 >[Scala 函数式与控制抽象](#Scala-函数式与抽象控制)
 
@@ -205,7 +205,7 @@ Scala类型系统继承结构图
      *  不可变数据结构、无副作用
      */
      
-#### 小目录 ####
+#### class 小目录 ####
      
     /**
      * Scala的main方法执行 @see SingletonObject.scala、Test2.scala
