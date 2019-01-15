@@ -14,7 +14,7 @@
 
 >[Scala循环](#Scala循环)
 
->[IO](#IO)
+>[Scala IO](#Scala-IO)
 
 >[函数式与控制抽象](#Scala函数式与抽象控制)
 
@@ -737,9 +737,7 @@ object LoopBasic {
     //因为while没有返回值，并且使用了var变量，实际上函数式语言并不推荐。可以使用尾递归替代
 }
 ``` 
-#### Scala IO 简单使用，非重点 ####
-
-<span id="6">IO</span>
+#### Scala IO ####
 
 ```scala
 package cn.edu.jxnu.scala.basic
