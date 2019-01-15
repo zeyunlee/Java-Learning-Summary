@@ -98,6 +98,7 @@
      * 14	AnyRef	任何引用类型的超类型
      */
 
+Scala类型系统继承结构图
 ![Scala类型系统继承结构图](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/scala/basic/scala%E7%B1%BB%E5%9E%8B%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84.jpg)
 
     /**
@@ -200,6 +201,7 @@
 
 此图由playscala.cn作者作，并授权使用
 
+Scala基本语法图解
 ![Scala基本语法图解](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/scala/basic/Scala%E8%AF%AD%E6%B3%95%E5%9B%BE%E8%A7%A3.png)
 
 PS:每个markdown的Scala代码块原本是一个class，但是这样文件太多不方便查看，现已经被直接放到本md中。
@@ -415,8 +417,10 @@ object PrintMultiTable extends App {
 
 }
 ```
+不可变集合继承结构
 ![不可变集合继承结构](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/scala/basic/immutable.png)
 
+可变集合继承结构
 ![可变集合继承结构](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/scala/basic/mutable.png)
 
 #### 面向对象的类、单例对象、构造函数、序列化、注解使用等 ####
