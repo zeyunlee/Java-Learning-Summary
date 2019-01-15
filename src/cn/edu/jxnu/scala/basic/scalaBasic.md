@@ -1,3 +1,16 @@
+### Scala基础 ###
+
+>大目录
+
+[基本概念](#1)
+[小小小目录](#2)
+[基础语法](#3)
+[面向对象](#4)
+[循环](#5)
+[IO](#6)
+[函数式与控制抽象](#7)
+[启动原理](#8)
+
 #### 声明与废话在前 ####  
 
 因为我不是零基础，所以不再列举简单的。只记录稍微重点的。希望能帮助到你们，也当是自己的复习，学习的记录。目前主要做自动化、测试平台与工具开发（Java）
@@ -11,6 +24,8 @@
 《Scala编程第三版》、《响应式架构 消息模式Actor实现与Scala、Akka应用集成》，《快学Scala》入门 （不是很友好）
  
 #### 前情提要 QAQ ####
+
+<span id="1">前情提要 QAQ</span> 
 
     /**
      * scala特点
@@ -176,13 +191,17 @@ Scala类型系统继承结构图
      * @see Test1.scala
      **/
 
-    /** 函数式编程核心理念：
-     * 函数是一等的值
-     * 不可变数据结构、无副作用
+    /** 三要素
+     *
+     *  函数式编程核心理念：
+     *  函数是一等的值
+     *  不可变数据结构、无副作用
      */
      
 #### 小小小目录 ####
      
+<span id="2">小小小目录</span> 
+
     /**
      * Scala的main方法执行 @see SingletonObject.scala、Test2.scala
      * Scala的for循环中断和List的交并差 @see LoopBasic.scala
@@ -207,6 +226,8 @@ Scala基本语法图解
 PS:每个markdown的Scala代码块原本是一个class，但是这样文件太多不方便查看，现已经被直接放到本md中。
 
 #### 以下开始都是代码实例（基础语法部分） ####
+
+<span id="3">基础语法</span>
 
 ```scala
 object Test1 {
@@ -425,6 +446,8 @@ object PrintMultiTable extends App {
 
 #### 面向对象的类、单例对象、构造函数、序列化、注解使用等 ####
 
+<span id="4">面向对象</span>
+
 ```scala
 package cn.edu.jxnu.scala.basic
 
@@ -597,6 +620,8 @@ object TestInnerPrivateClass extends App {
 ```
 #### Scala循环 ####
 
+<span id="5">循环</span>
+
 ```scala
 package cn.edu.jxnu.scala.basic
 
@@ -715,6 +740,8 @@ object LoopBasic {
 ``` 
 #### Scala IO 简单使用，非重点 ####
 
+<span id="6">IO</span>
+
 ```scala
 package cn.edu.jxnu.scala.basic
 
@@ -795,6 +822,8 @@ object Test11 extends App {
 }
 ```
 #### Scala函数式与抽象控制 ####
+
+<span id="7">函数式与控制抽象</span>
 
 ```scala
 package cn.edu.jxnu.scala.basic
@@ -1078,9 +1107,11 @@ object Function4 extends App {
 ```
 #### Scala 启动原理 ####
 
+<span id="8">启动原理</span>
+
 ```scala
 package cn.edu.jxnu.scala.basic
-
+//待补
 object Singleton {
     def main(args: Array[String]) {
         SingletonObject.hello()
