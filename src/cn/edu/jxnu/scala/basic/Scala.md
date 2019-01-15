@@ -10,6 +10,8 @@ loading
 
 #### 项目 ####
 
+[Scala秒杀系统](https://github.com/jxnu-liguobin/SpringBoot-SecKill-Scala)
+
 loading
 
 #### 鸣谢 ####
