@@ -4,7 +4,7 @@
 
 [scala基础](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/scala/basic/scalaBasic.md)
 
-#### 高级特性 ####
+#### 应用实战 ####
 
 loading
 
