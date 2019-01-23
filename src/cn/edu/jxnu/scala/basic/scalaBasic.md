@@ -320,6 +320,20 @@ object Test4 extends App {
     if (str3 equals str4) println("equals比较内容") //输出
 
 }
+object HashEquals extends App {
+
+    val intVal = new Integer(1)
+    val longVal = new lang.Long(2) //不加包名的话，默认导入scala.Long
+
+    println(intVal == longVal) //输出true，Scala中==等同于equals
+
+    println(intVal.##) //scala hashcode
+    println(longVal.##)
+
+
+    println(intVal eq (longVal)) //false,比较引用的相等性，效果等同于Java的引用比较（Ref1==Ref2）
+    println(intVal ne (longVal)) //true,引用不等
+}
 ```
 ```scala
 object Test5 extends App {
@@ -516,10 +530,11 @@ class Construction3(val var1: String, val var2: String) {
 class Construction4 @SerialVersionUID(1L)(override val var1: String, override val var2: String) extends Construction3(
     var1, var1) {
 
+    //Trait的线性化细节描述Scala编程P238
     //1.java的super是静态绑定的
     //在java（单一继承）里面，假设有一个对象a，它既是类型X，又是类型Y，那么X和Y必定具有“父子关系”，也就是说，其中一个是另一个的父类。
     //因为java的继承是单一继承，不管实际类型是什么，一个对象的“继承链”，从super所在类开始往左的层分，都是在编译时期就可以确定下来的。
-    //2.scala的super是动态绑定的
+    //2.scala的super是动态绑定的（类中还是静态绑定的）
     //在scala（多重继承）里面，假设有一个对象a，它既是trait X，又是trait Y， X和Y可能具有父子关系，也可能是共享同一个祖先的“兄弟”，反正，它们的关系不再限定在“父子”上。
     //因为scala允许多重继承，父亲类和trait们的优先顺序，是由对象的实际类型的线性化结果决定的，所以需要动态绑定。
     //3.调用方法，有三种情况，如下
@@ -534,6 +549,16 @@ class Construction4 @SerialVersionUID(1L)(override val var1: String, override va
         this(null, null) //使用空构造，也需要调用主构造并传入null，因为默认自己写了有参的主构造，就不再提供无参主构造
         super.print("hello world") //排除自身从左开始就是：Construction3类
     }
+
+}
+
+//仅是演示，混入多个特质
+class Trait extends Serializable with Comparable[String] with Iterable[String] {
+
+    //特质的特点：与Java8的接口很像，但功能更强大
+    //特质可以声明字段并保持状态，特质可以做任何在类中能做的事，除了两种情况
+    //1.无类参数（主构造函数是无参的）
+    //2.特质中super是动态绑定的，类中是静态绑定的
 
 }
 
@@ -1133,4 +1158,18 @@ object SingletonObject {
     }
 }
 ```
+```scala
+/**
+ * 定义自己的值类型
+ *
+ * @author 梦境迷离
+ * @time 2019-01-23
+ */
+class Dollars(val amount: Int) extends AnyVal {
 
+    override def toString: String = "$" + amount
+
+}
+//有多个字符串类型的参数，在传参的顺序不正确的时候编译器不会给出提示，如果使用值类型，编译器会给出编译错误
+```
+//END
