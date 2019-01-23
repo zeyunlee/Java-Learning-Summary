@@ -1039,7 +1039,18 @@ object Function3 extends App {
 
 }
 
+/**
+ * 定义自己的值类型
+ *
+ * @author 梦境迷离
+ * @time 2019-01-23
+ */
+class Dollars(val amount: Int) extends AnyVal {
 
+    override def toString: String = "$" + amount
+
+}
+//有多个字符串类型的参数，在传参的顺序不正确的时候编译器不会给出提示，如果使用值类型，编译器会给出编译错误
 /**
  * 控制抽象
  * 柯里化与贷出模式
@@ -1158,18 +1169,3 @@ object SingletonObject {
     }
 }
 ```
-```scala
-/**
- * 定义自己的值类型
- *
- * @author 梦境迷离
- * @time 2019-01-23
- */
-class Dollars(val amount: Int) extends AnyVal {
-
-    override def toString: String = "$" + amount
-
-}
-//有多个字符串类型的参数，在传参的顺序不正确的时候编译器不会给出提示，如果使用值类型，编译器会给出编译错误
-```
-//END
