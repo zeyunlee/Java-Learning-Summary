@@ -7,7 +7,7 @@
 >[Java For Leetcode](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/leetcode) |
     [Scala For Leetcode](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/leetcode/scala) 
 
->[Scala相关](https://github.com/jxnu-liguobin/Java-Learning-Summary/tree/master/src/cn/edu/jxnu/scala/basic/Scala.md)
+>[Scala相关](https://github.com/jxnu-liguobin/Java-Learning-Summary/tree/master/src/cn/edu/jxnu/scala/Scala.md)
 
 >[计算机网络](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/network.md)
    
