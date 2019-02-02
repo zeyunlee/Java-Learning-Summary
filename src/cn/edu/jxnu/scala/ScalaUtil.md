@@ -1,5 +1,16 @@
 ### Scala常用的Util类
 
+> 目录
+* Spring Data Redis工具 redis键值对操作
+* SpringMail工具 邮件发送相关服务
+* User实体类 定义与Java兼容的Scala实体类用于Mybatis操作数据库
+* Spring缓存支持配置 配置自定义缓存管理器为reids
+* Spring连接池属性注入 配置redis连接
+* SpringMVC配置 Scala继承Java抽象类
+* Swagger2配置
+* Spring处理拦截器 Scala实现Java接口
+* Scala时间工具
+
 #### Spring Data Redis工具 redis键值对操作
 
 ```scala
