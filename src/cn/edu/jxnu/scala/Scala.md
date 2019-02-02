@@ -2,7 +2,9 @@
  
 #### 语法笔记 #### 
 
-[Scala基础](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/scala/basic/scalaBasic.md)
+[Scala基础](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/scala/ScalaBasic.md)
+
+[Scala常用工具|配置类](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/scala/ScalaUtil.md)
 
 #### 应用实践 ####
 
