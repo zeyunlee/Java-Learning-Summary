@@ -4,7 +4,7 @@
 * Spring Data Redis工具 redis键值对操作
 * SpringMail工具 邮件发送相关服务
 * User实体类 定义与Java兼容的Scala实体类用于Mybatis操作数据库
-* Spring缓存支持配置 配置自定义缓存管理器为reids
+* Spring缓存支持配置 配置自定义缓存管理器为redis
 * Spring连接池属性注入 配置redis连接
 * SpringMVC配置 Scala继承Java抽象类
 * Swagger2配置
@@ -333,7 +333,7 @@ class User extends Serializable {
     override def toString = s"User(id=$id, username=$username, password=$password, sign=$sign, avatar=$avatar, email=$email, createDate=$createDate, sex=$sex, status=$status, active=$active)"
 }
 ```
-#### Spring缓存支持配置 配置自定义缓存管理器为reids
+#### Spring缓存支持配置 配置自定义缓存管理器为redis
 
 ```scala
 import java.lang.reflect.Method
