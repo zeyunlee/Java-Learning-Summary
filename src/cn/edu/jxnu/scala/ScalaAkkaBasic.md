@@ -61,7 +61,7 @@ import akka.actor.Actor
 
 /**
  * actor四大默认存在的方法
- *  类似Java Servlet
+ * 类似Java Servlet
  * @author 梦境迷离
  * @time 2019-02-11
  */
