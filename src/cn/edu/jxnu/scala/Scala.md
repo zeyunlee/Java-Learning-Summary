@@ -2,9 +2,11 @@
  
 #### Scala基础 #### 
 
-[Scala语法基础](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/scala/ScalaBasic.md)
+[Scala-语法基础](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/scala/ScalaBasic.md)
 
-[Scala常用工具|配置类](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/scala/ScalaUtil.md)
+[Scala-常用工具|配置类](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/scala/ScalaUtil.md)
+
+[Scala-Akka基础](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/scala/ScalaAkkaBasic.md)
 
 #### 应用实践 ####
 
@@ -14,7 +16,7 @@ loading
 
 #### 项目 ####
 
-[Scala秒杀系统](https://github.com/jxnu-liguobin/SpringBoot-SecKill-Scala)
+[Scala-秒杀系统](https://github.com/jxnu-liguobin/SpringBoot-SecKill-Scala)
 
 [自動化測試平台](https://github.com/LightSwordSpringBoot/lightsword)
 
