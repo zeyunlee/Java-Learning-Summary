@@ -1,6 +1,10 @@
 ### Scala版Akka基础
 
-    Gradle依赖 compile "com.typesafe.akka:akka-actor_2.11:2.4.4"
+    Gradle依赖版本 compile "com.typesafe.akka:akka-actor_2.11:2.4.4"
+    
+    
+    
+[源代码库 - scala-akka-learn](https://github.com/jxnu-liguobin/scala-akka-learn)
 
 #### 入门实例（helloworld）
 
