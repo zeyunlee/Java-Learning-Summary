@@ -628,6 +628,7 @@ class SystemHandlerInterceptor extends HandlerInterceptor {
 ```scala
 import java.text.SimpleDateFormat
 import java.util.Date
+import java.util.Calendar
 
 object DateUtil {
 
@@ -664,6 +665,28 @@ object DateUtil {
       * 获取当前时间Long类型
       */
     def getLongDateTime(): Long = new Date().getTime
-
+    
+    /**
+     * 获取星期几
+     */
+    def dayOfWeek(dateStr: String): Int = {
+        val sdf = new SimpleDateFormat(partternPart)
+        val date = sdf.parse(dateStr)
+        val cal = Calendar.getInstance();
+        cal.setTime(date);
+        var w = cal.get(Calendar.DAY_OF_WEEK) - 1;
+        //星期天 默认为0
+        if (w <= 0)
+          w = 7
+        w
+      }
+      
+    /**
+      * 判断是否是周末
+      */
+    def isRestday(date: String): Boolean = {
+      val dayNumOfWeek = dayOfWeek(date)
+      dayNumOfWeek == 6 || dayNumOfWeek == 7
+    }
 }
 ```
