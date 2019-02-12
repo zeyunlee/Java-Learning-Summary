@@ -26,7 +26,8 @@ id_rsa.pub文件添加到Git的秘钥管理处，实际任何遵守Git协议的�
 2. git init  初始化本地仓库。
 3. git add README.md 将上述文件添加到暂存区
 4. git commit -m "first commit" 将暂存区的文件进行添加到本地分支。
-5. git remote add origin https://github.com/jxnu-liguobin/SpringBoot-Seckill.git 添加远程分支，一般名称同本地分支，已经存在则绑定本地与远程，该操作只能在init后执行，且只能执行一次。
+5. git remote add origin https://github.com/jxnu-liguobin/SpringBoot-Seckill.git 添加远程分支，一般名称同本地分支，
+已经存在则绑定本地与远程，该操作只能在init后执行，且只能执行一次。
 6. git push -u origin master 提交本地到master主分支，默认本地master，实际开发时这里是开发的sprint分支，意为迭代。
 
 上面的暂存区，分支，工作区的存储模型[借鉴自CyC2018](https://github.com/CyC2018/Interview-Notebook/blob/master/notes/Git.md)
@@ -90,6 +91,9 @@ git reset 分支回滚到暂存区 （--hard 版本号，即回滚最后一次�
 git checkout 暂存区回滚到工作区（回滚最后一次add操作，--files） -b branch  在本地创建并切换到branch分支，前面以前提到到，-d是删除，切记
 
 如果需要删除索引中的myfile文件但不删除文件本身，你可以：git rm --cached myfile 然后提交即可
+
+PS:使用IDEA时，在未进行add时，执行revert也可以回退修改，还可以手动选择需要回退的文件，很方便。
+
 
 ### 6、git rebase 和 git merge的区别
 
@@ -164,8 +168,10 @@ git rebase --continue  git 便会自动继续合并
 
 * mvn clean deploy 清理并发布   
 * mvn install -Dmaven.test.skip=true 跳过测试打包
-* mvn dependency:tree 查看依赖树 IDE的依赖没有成功下载的时候，可以使用该命令进行查看，此命令将自动下载本地没有的依赖，如果此处下载成功，则说明是本地仓库缓存问题，导致找不到依赖
-* mvn clean compile -U  编译 该参数能强制让Maven检查所有SNAPSHOT依赖更新，确保集成基于最新的状态，如果没有该参数，Maven默认以天为单位检查更新，而持续集成的频率应该比这高很多。
+* mvn dependency:tree 查看依赖树 IDE的依赖没有成功下载的时候，可以使用该命令进行查看，此命令将自动下载本地没有的依赖，
+如果此处下载成功，则说明是本地仓库缓存问题，导致找不到依赖
+* mvn clean compile -U  编译 该参数能强制让Maven检查所有SNAPSHOT依赖更新，确保集成基于最新的状态，如果没有该参数，
+Maven默认以天为单位检查更新，而持续集成的频率应该比这高很多。
 
 ### 8、解决冲突的方式之一
 	
@@ -174,5 +180,64 @@ git rebase --continue  git 便会自动继续合并
 	执行git add 将修改完后的冲突文件添加进索引【stage 暂存区，位于工作区和当前分支之间】
 	执行git rebase --continue 继续合并
  
+### 9、处理本地分支与远程绑定的分支不同名
+
+本地是branchA分支，提交代码时却是和远程的branchB分支绑定的，此时提交会更新branchB分支，但是希望直接更新branchA分支的代码。
+此时可以解除绑定，执行：
+
+解除关联库 git remote remove origin
+            
+重新关联库 git remote add origin sshUrl
+
+提交本地分支至远程
+
+或者在push的时候在IDEA弹窗上方修改为origin/branchA，这个点击的时候需要自己输入至少一个首字母才会提示可选分支，不智能。
+  
+### 10、git revert 、git reset
+
+git reset 主要用法：
+
+git reset (–mixed) HEAD~1 
+回退一个版本，且会将暂存区的内容和本地已提交的内容全部恢复到未暂存的状态，不影响原来本地文件（未提交的也不受影响，更新 INDEX 索引区数据为当前 HEAD 所指提交对应的快照内容） 
+git reset –soft HEAD~1 
+回退一个版本，不清空暂存区，将已提交的内容恢复到暂存区，不影响原来本地的文件（未提交的也不受影响，不更新 INDEX 索引区） 
+git reset –hard HEAD~1 
+回退一个版本，清空暂存区，将已提交的内容的版本恢复到本地，本地的文件也将被恢复的版本替换（更新工作目录和索引一样）
+
+必须注意，--hard 标记是 reset 命令唯一的危险用法，它也是 Git 会真正地销毁数据的仅有的几个操作之一。
+其他任何形式的 reset 调用都可以轻松撤消，但是 --hard 选项不能，因为它强制覆盖了工作目录中的文件。
+我们可以通过 reflog 来找回它。但是若该文件还未提交，Git 仍会覆盖它从而导致无法恢复。
+
+git revert 主要用法：
+
+git revert HEAD                撤销前一次 commit
+git revert HEAD^               撤销前前一次 commit    
+git revert commit_id （比如:fa042ce57ebbe5bb9c8db709f719cec2c58ee7ff）
+
+git revert是提交一个新的版本，将需要revert的版本的内容再反向修改回去，版本会递增，不影响之前提交的内容.
+Tip : 通常情况下，上面这条revert命令会让程序员修改注释，这时候程序员应该标注revert的原因，假设程序员就想使用默认的注释，
+可以在命令中加上-n或者--no-commit，应用这个参数会让revert 改动只限于程序员的本地仓库，而不自动进行commit，如果程序员想在revert之前进行更多的改动，
+或者想要revert多个commit。
+
+当有多个commit需要撤销，有可能是连续的：
+
+使用该命令可以将提交撤回到commit_id_start的位置：git revert -n commit_id_start..commit_id_end
+
+或是不连续的：git revert -n commit_id_1   git revert -n commit_id_3
+
+git revert 和 git reset的主要区别：
+
+1. git revert是用一次新的commit来回滚之前的commit，git reset是直接删除指定的commit。 
+2. 在回滚这一操作上看，效果差不多。但是在日后继续merge以前的老版本时有区别。因为git revert是用一次逆向的commit“中和”之前的提交，
+因此日后合并老的branch时，导致这部分改变不会再次出现，但是git reset是之间把某些commit在某个branch上删除，
+因而和老的branch再次merge时，这些被回滚的commit应该还会被引入。 
+3. git reset 是把HEAD向后移动了一下，而git revert是HEAD继续前进，只是新的commit的内容和要revert的内容正好相反，能够抵消要被revert的内容。          
+
+
 
 欢迎指出提出建议和意见
+
+
+参考:
+[简书](https://www.jianshu.com/p/9299e32faa62) | [博客园](https://www.cnblogs.com/0616--ataozhijia/p/3709917.html) 
+| [CSDN](https://blog.csdn.net/leonliu06/article/details/79747301) | [CSDN](https://blog.csdn.net/alphapersonality/article/details/80581730)
