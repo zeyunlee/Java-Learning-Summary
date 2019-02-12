@@ -92,7 +92,7 @@ git checkout 暂存区回滚到工作区（回滚最后一次add操作，--files
 
 如果需要删除索引中的myfile文件但不删除文件本身，你可以：git rm --cached myfile 然后提交即可
 
-PS:使用IDEA时，在未进行add时，执行revert也可以回退修改，还可以手动选择需要回退的文件，很方便。
+PS:使用IDEA时，在未进行add时，执行IDEA提供的revert菜单也可以回退修改，还可以手动选择需要回退的文件，很方便。
 
 
 ### 6、git rebase 和 git merge的区别
