@@ -1,6 +1,9 @@
-#### 主要包含  【长期更新-Java/Scala实现】 ####
+### 大自然的搬运工 -myy
 
-#### 大自然的搬运工 【myy】 ####
+#### 长期更新 - Java/Scala实现
+
+#### 主要包含
+
 
 >[剑指offer多种解法 | 编程之美 | 笔试题](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/practice)
 
@@ -33,8 +36,9 @@
    
 >[八大排序算法](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/Sort.md)
    
-  
-说明：
+---
+
+版权说明：
  
 说明在包中，部分收集于网络；知晓原作者以及版权的则在package-info类或者包对象中说明，侵删；仅供参考。
 
@@ -42,8 +46,9 @@
 
 PS:任何对“新手”有帮助的知识点欢迎补充到本库 。
 
+---
 
-库说明：
+库结构说明：
 
 整体是maven聚合项目，子项目以后统一使用gradle，不再使用maven。
 
