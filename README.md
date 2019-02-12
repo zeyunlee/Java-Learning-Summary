@@ -57,7 +57,7 @@ PS:任何对“新手”有帮助的知识点欢迎补充到本库 。
 
 结构如图：
 
-![](https://github.com/jxnu-liguobin/Java-Learning-Summary/tree/master/src/cn/edu/jxnu/practice/picture/projectStructure.png)
+![](https://github.com/jxnu-liguobin/Java-Learning-Summary/tree/master/src/cn/edu/jxnu/practice/picture/projectStructure.jpeg)
 
 后续工作：尽量将每个“知识点多，非基础知识”方向的资料都整理为子模块。
 
