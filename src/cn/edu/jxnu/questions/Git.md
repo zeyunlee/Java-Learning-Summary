@@ -240,4 +240,4 @@ git revert 和 git reset的主要区别：
 参考:
 [简书](https://www.jianshu.com/p/9299e32faa62) | [博客园](https://www.cnblogs.com/0616--ataozhijia/p/3709917.html) 
 | [CSDN1](https://blog.csdn.net/leonliu06/article/details/79747301) | [CSDN2](https://blog.csdn.net/alphapersonality/article/details/80581730)
-| [Cyc2018]
+| [Cyc2018](https://github.com/CyC2018/Interview-Notebook/blob/master/notes/Git.md)
