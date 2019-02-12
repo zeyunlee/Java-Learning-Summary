@@ -50,8 +50,15 @@ PS:任何对“新手”有帮助的知识点欢迎补充到本库 。
 
 库结构说明：
 
-整体是Gradle聚合项目，子项目以后统一使用Gradle，不再使用Maven。父子工程无依赖关系，可单独使用。
+* Java-Learning-Summary整体是Gradle聚合项目
+* src是主工程，存放代码与整理资料，其余Module是子模块
+* 子模块以后统一使用Gradle，不再使用Maven
+* 父子工程无依赖关系，可单独使用
 
-后续工作：尽量将每个“知识点多，非基础知识”方向的资料都整理为子工程。
+结构如图：
+
+![](https://github.com/jxnu-liguobin/Java-Learning-Summary/tree/master/src/cn/edu/jxnu/practice/picture/projectStructure.png)
+
+后续工作：尽量将每个“知识点多，非基础知识”方向的资料都整理为子模块。
 
 
