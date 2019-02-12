@@ -17,7 +17,7 @@
    
 >[Spring | Mybatis](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/SSM.md)
  
->[Java多线程 | 并发 | 锁](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/concurrent/%E5%A4%9A%E7%BA%BF%E7%A8%8B.md)
+>[Java多线程 | 并发 | 锁](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/%E5%A4%9A%E7%BA%BF%E7%A8%8B.md)
    
 >[反射 | ASM](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/reflect/ASM.md)
 
@@ -33,12 +33,20 @@
    
 >[八大排序算法](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/Sort.md)
    
-   
-       其他知识的代码。不使用md文件是希望可以直接运行，说明在包中，部分收集于网络。
-       知晓原作者以及版权的则在package-info类或者包对象中说明，侵删。
-       
-       仅供参考 QAQ
-       
-       2018.12.1开始，本人主要维护本仓库Scala部分 。 
-       
-       PS:任何对“新手”有帮助的知识点欢迎补充到本库 。 
+  
+说明：
+ 
+说明在包中，部分收集于网络；知晓原作者以及版权的则在package-info类或者包对象中说明，侵删；仅供参考。
+
+2018.12.1开始，本人主要维护本仓库Scala部分 。 
+
+PS:任何对“新手”有帮助的知识点欢迎补充到本库 。
+
+
+库说明：
+
+整体是maven聚合项目，子项目以后统一使用gradle，不再使用maven。
+
+后续工作：尽量将每个“知识点多，非基础知识”方向的资料都整理为子工程。
+
+
