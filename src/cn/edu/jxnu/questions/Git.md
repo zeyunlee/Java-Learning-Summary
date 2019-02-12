@@ -193,15 +193,15 @@ Maven默认以天为单位检查更新，而持续集成的频率应该比这高
 
 或者在push的时候在IDEA弹窗上方修改为origin/branchA，这个点击的时候需要自己输入至少一个首字母才会提示可选分支，不智能。
   
-### 10、git revert 、git reset
+### 10、git revert 和 git reset
 
 git reset 主要用法：
 
-git reset (–mixed) HEAD~1 
+git reset (–mixed) ```HEAD~1 ```
 回退一个版本，且会将暂存区的内容和本地已提交的内容全部恢复到未暂存的状态，不影响原来本地文件（未提交的也不受影响，更新 INDEX 索引区数据为当前 HEAD 所指提交对应的快照内容） 
-git reset –soft HEAD~1 
+git reset –soft ```HEAD~1 ```
 回退一个版本，不清空暂存区，将已提交的内容恢复到暂存区，不影响原来本地的文件（未提交的也不受影响，不更新 INDEX 索引区） 
-git reset –hard HEAD~1 
+git reset –hard ```HEAD~1 ```
 回退一个版本，清空暂存区，将已提交的内容的版本恢复到本地，本地的文件也将被恢复的版本替换（更新工作目录和索引一样）
 
 必须注意，--hard 标记是 reset 命令唯一的危险用法，它也是 Git 会真正地销毁数据的仅有的几个操作之一。
@@ -240,4 +240,5 @@ git revert 和 git reset的主要区别：
 
 参考:
 [简书](https://www.jianshu.com/p/9299e32faa62) | [博客园](https://www.cnblogs.com/0616--ataozhijia/p/3709917.html) 
-| [CSDN](https://blog.csdn.net/leonliu06/article/details/79747301) | [CSDN](https://blog.csdn.net/alphapersonality/article/details/80581730)
+| [CSDN1](https://blog.csdn.net/leonliu06/article/details/79747301) | [CSDN2](https://blog.csdn.net/alphapersonality/article/details/80581730)
+| [Cyc2018]
