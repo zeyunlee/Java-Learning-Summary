@@ -4,7 +4,7 @@
     
     
     
-[源代码库 - scala-akka-learn](https://github.com/jxnu-liguobin/scala-akka-learn)
+[源代码库 - scala-akka-learn](https://github.com/jxnu-liguobin/Java-Learning-Summary/tree/master/scala-akka-learn)
 
 #### 入门实例（helloworld）
 
