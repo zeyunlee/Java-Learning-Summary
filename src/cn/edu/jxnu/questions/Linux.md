@@ -2,20 +2,19 @@
 
 #### 工作环境设置文件与环境变量
 
-环境设置文件有两种：系统环境设置文件 和 个人环境设置文件
+环境设置文件有两种：系统环境设置文件和个人环境设置文件
 
 1. 系统中的用户工作环境设置文件：
- 登录环境设置文件：/etc/profile     
- 非登录环境设置文件：/etc/bashrc
+
+* 登录环境设置文件：```/etc/profile ```   
+* 非登录环境设置文件：```/etc/bashrc```
 
 2. 用户个人设置的环境设置文件：
- 登录环境设置文件: $HOME/.bash_profile   //这个是环境变量设置的地方
- 非登录环境设置文件：$HOME/.bashrc       //这个是定义别名的地方
+ 
+* 登录环境设置文件: ```$HOME/.bash_profile```   指用户登录系统后的工作环境  //这个是环境变量设置的地方
+* 非登录环境设置文件：```$HOME/.bashrc```       指用户再调用子shell时所使用的用户环境  //这个是定义别名的地方
 
-* 登录环境：指用户登录系统后的工作环境
-* 非登录环境：指用户再调用子shell时所使用的用户环境
-
-vi ~/.bash_profile 修改PATH行,把环境变量添加进去，这种方法是针对用户起作用的
+```vi ~/.bash_profile``` 修改PATH行,把环境变量添加进去，这种方法是针对用户起作用的
 
 我的电脑的环境变量：
 
@@ -28,27 +27,29 @@ vi ~/.bash_profile 修改PATH行,把环境变量添加进去，这种方法是�
     export ANDROID_HOME=/Users/liguobin/soft/android-sdk-macosx
     export PATH=$PATH:$GRADLE_HOME/bin:$JAVA_HOME/bin:$M2_HOME/bin:$TOMCAT_HOME/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 
-冒号隔开；$M2_HOME表示引用变量；查看环境变量：echo $PATH；修改完刷新：source ~/.bash_profile，不报错则成功。
+冒号隔开；```$M2_HOME```表示引用变量；
+查看环境变量：```echo $PATH```；
+修改完刷新：```source ~/.bash_profile```，不报错则成功。
 
 #### Linux常用命令
 
 * 查找文件
 
-```find / -name filename.txt``` 根据名称查找/目录下的filename.txt文件。
-```find . -name "*.xml"``` 递归查找所有的xml文件
-```find . -name "*.xml" |xargs grep "hello world"``` 递归查找所有文件内容中包含hello world的xml文件
-```grep -H 'spring' *.xml``` 查找所以有的包含spring的xml文件
-```find ./ -size 0 | xargs rm -f & ```删除文件大小为零的文件
-```ls -l | grep '.jar'``` 查找当前目录中的所有jar文件
-```grep 'test' d*``` 显示所有以d开头的文件中包含test的行。
-```grep 'test' aa bb cc``` 显示在aa，bb，cc文件中匹配test的行。
-```grep '[a-z]\{5\}' aa``` 显示所有包含每个字符串至少有5个连续小写字符的字符串的行。
-```lesss fileName``` / 向下搜索 ？向上搜索 &/ 只显示匹配模式的行
+```find / -name filename.txt``` 根据名称查找/目录下的filename.txt文件<br>
+```find . -name "*.xml"``` 递归查找所有的xml文件<br>
+```find . -name "*.xml" |xargs grep "hello world"``` 递归查找所有文件内容中包含hello world的xml文件<br>
+```grep -H 'spring' *.xml``` 查找所以有的包含spring的xml文件<br>
+```find ./ -size 0 | xargs rm -f & ```删除文件大小为零的文件<br>
+```ls -l | grep '.jar'``` 查找当前目录中的所有jar文件<br>
+```grep 'test' d*``` 显示所有以d开头的文件中包含test的行<br>
+```grep 'test' aa bb cc``` 显示在aa，bb，cc文件中匹配test的行<br>
+```grep '[a-z]\{5\}' aa``` 显示所有包含每个字符串至少有5个连续小写字符的字符串的行<br>
+```lesss fileName``` / 向下搜索 ？向上搜索 &/ 只显示匹配模式的行<br>
 
 * 查看一个程序是否运行
 
-```ps –ef|grep tomcat``` 查看所有有关tomcat的进程
-```ps -ef|grep --color java``` 高亮要查询的关键字
+```ps –ef|grep tomcat``` 查看所有有关tomcat的进程<br>
+```ps -ef|grep --color java``` 高亮要查询的关键字<br>
 
 * 终止线程
 
@@ -64,10 +65,10 @@ vi ~/.bash_profile 修改PATH行,把环境变量添加进去，这种方法是�
 
 * 复制文件
 
-```cp source dest``` 复制文件
-```cp -r sourceFolder targetFolder``` 递归复制整个文件夹
-```scp sourecFile romoteUserName@remoteIp:remoteAddr``` 从本地拷贝到远程
-```scp remote_username@remote_ip:remote_folder  local_folder``` 从远处复制到本地
+```cp source dest``` 复制文件<br>
+```cp -r sourceFolder targetFolder``` 递归复制整个文件夹<br>
+```scp sourecFile romoteUserName@remoteIp:remoteAddr``` 从本地拷贝到远程<br>
+```scp remote_username@remote_ip:remote_folder  local_folder``` 从远处复制到本地<br>
 
 * 创建目录
 
@@ -75,8 +76,8 @@ vi ~/.bash_profile 修改PATH行,把环境变量添加进去，这种方法是�
 
 * 删除目录
 
-```rmdir deleteEmptyFolder``` 删除空目录 
-```rm -rf deleteFile``` 递归删除目录中所有内容
+```rmdir deleteEmptyFolder``` 删除空目录<br>
+```rm -rf deleteFile``` 递归删除目录中所有内容<br>
 
 * 移动文件
 
@@ -137,27 +138,26 @@ vi ~/.bash_profile 修改PATH行,把环境变量添加进去，这种方法是�
 
 * 查看进程
 
-```ps aux|grep java``` 查看java进程
-```ps aux``` 查看所有进程
+```ps aux|grep java``` 查看java进程<br>
+```ps aux``` 查看所有进程<br>
 
 * 以树状图列出目录的内容
 
 ```tree a```
 
-在Mac OSX 系统默认是没有类似windows中的 tree命令，找到一条比较有意思的命令可以实现：
-```find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'```
-为了方便使用，写一个alias 到~/.profile里:```alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"```
-写完记得```source ~/.profile```
+在Mac OSX 系统默认是没有类似windows中的 tree命令，找到一条比较有意思的命令可以实现：<br>
+```find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'```<br>
+为了方便使用，写一个alias 到~/.profile里:<br>
+```alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"```写完记得```source ~/.profile```
 
 * 文件下载
 
-```wget http://file.tgz```  mac下安装wget命令
-```curl http://file.tgz```
+```wget http://file.tgz```  mac下安装wget命令<br>
+```curl http://file.tgz```<br>
 
 * 网络检测
 
-```ping www.just-ping.com```
-加参数-t表示持续进行
+```ping www.just-ping.com``` //加参数-t表示持续进行
 
 * 远程登录
 
@@ -166,7 +166,7 @@ vi ~/.bash_profile 修改PATH行,把环境变量添加进去，这种方法是�
 * ```>>```和```>```重定向命令
 
 ```>``` 是定向输出到文件，如果文件不存在，就创建文件；如果文件存在，就将其清空；一般我们备份清理日志文件的时候，就是这种方法：先备份日志，
-再用 ```>```，将日志文件清空（文件大小变成0字节）；
+再用 ```>```，将日志文件清空（文件大小变成0字节）。
 
 ```>>``` 这个是将输出内容追加到目标文件中。如果文件不存在，就创建文件；如果文件存在，则将新的内容追加到那个文件的末尾，该文件中的原有内容不受影响
 
@@ -177,8 +177,8 @@ java, javac, [jps](http://www.hollischuang.com/archives/105), [jstat](http://www
 
 * 输出
 
-```var=$(echo 1)``` 获取echo输出的值，并赋值给变量；或使用``` `` ```
-```awk '{print $2}' $fileName ```  一行一行的读取指定的文件， 以空格作为分隔符，打印第二个（列）字段
+```var=$(echo 1)``` 获取echo输出的值，并赋值给变量；或使用``` `` ```<br>
+```awk '{print $2}' $fileName ```  一行一行的读取指定的文件， 以空格作为分隔符，打印第二个（列）字段<br>
 
 * 发送curl，并判断返回值是否为空
 
@@ -200,8 +200,8 @@ fi
 
 在后台启动 ```sh runMaxim.sh &```
 
-进程切换到后台的时候，我们把它称为job。切换到后台时会输出相关job信息，
-以前面的输出为```[1] 11319 [1]表示job ID是1，11319表示进程ID是11319。切换到后台的进程，仍然可以用ps命令查看。```
+进程切换到后台的时候，我们把它称为job。切换到后台时会输出相关job信息，<br>
+以前面的输出为```[1] 11319 [1]表示job ID是1，11319表示进程ID是11319。切换到后台的进程，仍然可以用ps命令查看。```<br>
  
 前后台间切换
 
