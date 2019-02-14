@@ -26,7 +26,7 @@ id_rsa.pub文件添加到Git的秘钥管理处，实际任何遵守Git协议的�
 2. git init  初始化本地仓库。
 3. git add README.md 将上述文件添加到暂存区
 4. git commit -m "first commit" 将暂存区的文件进行添加到本地分支。
-5. git remote add origin https://github.com/jxnu-liguobin/SpringBoot-Seckill.git 添加远程分支，一般名称同本地分支，
+5. git remote add origin ```https://github.com/jxnu-liguobin/SpringBoot-Seckill.git``` 添加远程分支，一般名称同本地分支，
 已经存在则绑定本地与远程，该操作只能在init后执行，且只能执行一次。
 6. git push -u origin master 提交本地到master主分支，默认本地master，实际开发时这里是开发的sprint分支，意为迭代。
 
@@ -38,7 +38,7 @@ id_rsa.pub文件添加到Git的秘钥管理处，实际任何遵守Git协议的�
 
 当然你也可以从远处拉下一个项目，就像这样
 
-git clone git@github.com:jxnu-liguobin/Java-Learning-Summary.git 此处的连接可以是SSH也可以是HTTPS，取决于你的爱好，推荐SSH。
+git clone ```git@github.com:jxnu-liguobin/Java-Learning-Summary.git``` 此处的连接可以是SSH也可以是HTTPS，取决于你的爱好，推荐SSH。
 
 如果是别人的仓库则你需要有权限否则可以拉取，无法提交，权限是指你的公钥必须要被添加到远程仓库的秘钥管理中心，公司一般有统一管理SSH的平台。
 
