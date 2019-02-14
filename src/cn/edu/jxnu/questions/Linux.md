@@ -12,7 +12,7 @@
 2. 用户个人设置的环境设置文件：
  
 * 登录环境设置文件: ```$HOME/.bash_profile```   指用户登录系统后的工作环境  //这个是环境变量设置的地方
-* 非登录环境设置文件：```$HOME/.bashrc```       指用户再调用子shell时所使用的用户环境  //这个是定义别名的地方
+* 非登录环境设置文件：```$HOME/.bashrc```       指用户再调用子shell时所使用的用户环境  //这个是定义别名的地方
 
 ```vi ~/.bash_profile``` 修改PATH行,把环境变量添加进去，这种方法是针对用户起作用的
 
@@ -35,25 +35,25 @@
 
 * 查找文件
 
-```find / -name filename.txt``` 根据名称查找/目录下的filename.txt文件<br>
-```find . -name "*.xml"``` 递归查找所有的xml文件<br>
-```find . -name "*.xml" |xargs grep "hello world"``` 递归查找所有文件内容中包含hello world的xml文件<br>
-```grep -H 'spring' *.xml``` 查找所以有的包含spring的xml文件<br>
-```find ./ -size 0 | xargs rm -f & ```删除文件大小为零的文件<br>
-```ls -l | grep '.jar'``` 查找当前目录中的所有jar文件<br>
-```grep 'test' d*``` 显示所有以d开头的文件中包含test的行<br>
-```grep 'test' aa bb cc``` 显示在aa，bb，cc文件中匹配test的行<br>
-```grep '[a-z]\{5\}' aa``` 显示所有包含每个字符串至少有5个连续小写字符的字符串的行<br>
-```lesss fileName``` / 向下搜索 ？向上搜索 &/ 只显示匹配模式的行<br>
+```find / -name filename.txt``` //根据名称查找/目录下的filename.txt文件<br>
+```find . -name "*.xml"``` //递归查找所有的xml文件<br>
+```find . -name "*.xml" |xargs grep "hello world"``` //递归查找所有文件内容中包含hello world的xml文件<br>
+```grep -H 'spring' *.xml``` //查找所以有的包含spring的xml文件<br>
+```find ./ -size 0 | xargs rm -f & ``` //删除文件大小为零的文件<br>
+```ls -l | grep '.jar'``` //查找当前目录中的所有jar文件<br>
+```grep 'test' d*``` //显示所有以d开头的文件中包含test的行<br>
+```grep 'test' aa bb cc``` //显示在aa，bb，cc文件中匹配test的行<br>
+```grep '[a-z]\{5\}' aa``` //显示所有包含每个字符串至少有5个连续小写字符的字符串的行<br>
+```lesss fileName``` //  / 向下搜索 ？向上搜索 &/ 只显示匹配模式的行<br>
 
 * 查看一个程序是否运行
 
-```ps –ef|grep tomcat``` 查看所有有关tomcat的进程<br>
-```ps -ef|grep --color java``` 高亮要查询的关键字<br>
+```ps –ef|grep tomcat``` //查看所有有关tomcat的进程<br>
+```ps -ef|grep --color java``` //高亮要查询的关键字<br>
 
 * 终止线程
 
-```kill -9 19979``` 终止线程号位19979的进程
+```kill -9 19979``` //终止线程号位19979的进程
 
 * 查看文件，包含隐藏文件
 
@@ -65,10 +65,10 @@
 
 * 复制文件
 
-```cp source dest``` 复制文件<br>
-```cp -r sourceFolder targetFolder``` 递归复制整个文件夹<br>
-```scp sourecFile romoteUserName@remoteIp:remoteAddr``` 从本地拷贝到远程<br>
-```scp remote_username@remote_ip:remote_folder  local_folder``` 从远处复制到本地<br>
+```cp source dest``` //复制文件<br>
+```cp -r sourceFolder targetFolder``` //递归复制整个文件夹<br>
+```scp sourecFile romoteUserName@remoteIp:remoteAddr``` //从本地拷贝到远程<br>
+```scp remote_username@remote_ip:remote_folder  local_folder``` //从远处复制到本地<br>
 
 * 创建目录
 
@@ -76,8 +76,8 @@
 
 * 删除目录
 
-```rmdir deleteEmptyFolder``` 删除空目录<br>
-```rm -rf deleteFile``` 递归删除目录中所有内容<br>
+```rmdir deleteEmptyFolder``` //删除空目录<br>
+```rm -rf deleteFile``` //递归删除目录中所有内容<br>
 
 * 移动文件
 
@@ -93,7 +93,7 @@
 
 * 修改文件权限
 
-```chmod 777 file.java //file.java```的权限-rwxrwxrwx，r表示读、w表示写、x表示可执行
+```chmod 777 file.java``` //file.java的权限-rwxrwxrwx，r表示读、w表示写、x表示可执行
 
 * 压缩文件
 
@@ -109,8 +109,7 @@
 
 * zip命令压缩并排除某一目录
 
-```zip -r 2019-02-12-19-30-00.zip ./ -x "./log/*"```
-使用zip压缩文件，将当前目录的所有文件/文件夹压缩成为2019-02-12-19-30-00.zip，并且排除掉当前文件夹中的log文件夹。
+```zip -r 2019-02-12-19-30-00.zip ./ -x "./log/*"``` //使用zip压缩文件，将当前目录的所有文件/文件夹压缩成为2019-02-12-19-30-00.zip，并且排除掉当前文件夹中的log文件夹。
 
 * 查看文件头10行
 
@@ -126,11 +125,11 @@
 
 * 使用超级管理员身份执行命令
 
-```sudo rm a.txt``` 使用管理员身份删除文件
+```sudo rm a.txt``` //使用管理员身份删除文件
 
 * 查看端口占用情况
 
-```netstat -tln | grep 8080``` 查看端口8080的使用情况
+```netstat -tln | grep 8080``` //查看端口8080的使用情况
 
 * 查看端口属于哪个程序
 
@@ -138,8 +137,8 @@
 
 * 查看进程
 
-```ps aux|grep java``` 查看java进程<br>
-```ps aux``` 查看所有进程<br>
+```ps aux|grep java``` //查看java进程<br>
+```ps aux``` //查看所有进程<br>
 
 * 以树状图列出目录的内容
 
@@ -152,7 +151,7 @@
 
 * 文件下载
 
-```wget http://file.tgz```  mac下安装wget命令<br>
+```wget http://file.tgz```  //mac下安装wget命令<br>
 ```curl http://file.tgz```<br>
 
 * 网络检测
@@ -177,8 +176,8 @@ java, javac, [jps](http://www.hollischuang.com/archives/105), [jstat](http://www
 
 * 输出
 
-```var=$(echo 1)``` 获取echo输出的值，并赋值给变量；或使用``` `` ```<br>
-```awk '{print $2}' $fileName ```  一行一行的读取指定的文件， 以空格作为分隔符，打印第二个（列）字段<br>
+```var=$(echo 1)``` //获取echo输出的值，并赋值给变量；或使用``` `` ```<br>
+```awk '{print $2}' $fileName ``` //一行一行的读取指定的文件， 以空格作为分隔符，打印第二个（列）字段<br>
 
 * 发送curl，并判断返回值是否为空
 
