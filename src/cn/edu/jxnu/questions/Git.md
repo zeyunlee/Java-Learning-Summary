@@ -44,7 +44,8 @@ git clone git@github.com:jxnu-liguobin/Java-Learning-Summary.git 此处的连接
 
 如果你有权限，你可以在本地创建一个自己的仓库和一个开发分支，并将master合并到本地这个分支上来只需要：
 
-git checkout -b newBrach origin/master  在origin/master的基础上创建newBrach分支，其中-b表示创建并切换到newBrach分支，origin/master表示源分支master
+git checkout -b newBrach origin/master  在origin/master的基础上创建newBrach分支，其中-b表示创建并切换到newBrach分支，origin/master表示源分支master。
+需要注意的是，这种方法使得当前分支与远程的master分支相关联了，在IDEA提交的时候一不小心就会提交到master分支了。具体看下面“处理本地分支与远程绑定的分支不同名”部分
 
 其次你还可以先创建一个本地分支 git checkout -b newBrach
 
@@ -183,13 +184,14 @@ Maven默认以天为单位检查更新，而持续集成的频率应该比这高
 ### 9、处理本地分支与远程绑定的分支不同名
 
 本地是branchA分支，提交代码时却是和远程的branchB分支绑定的，此时提交会更新branchB分支，但是希望直接更新branchA分支的代码。
-此时可以解除绑定，执行：
+经过测试，使用IDEA的checkout as 与 git checkout -b branchA origin/master命令是相同效果：导致branchA分支与远程master绑定。
+但实际一般我们需要branchA与远程branchA绑定。此时可以解除绑定，执行：
 
 解除关联库 git remote remove origin
             
 重新关联库 git remote add origin sshUrl
 
-提交本地分支至远程
+提交本地分支至远程 git push origin branchA 
 
 或者在push的时候在IDEA弹窗上方修改为origin/branchA，这个点击的时候需要自己输入至少一个首字母才会提示可选分支，不智能。
   
