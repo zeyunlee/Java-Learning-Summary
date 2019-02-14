@@ -186,7 +186,7 @@ java, javac, [jps](http://www.hollischuang.com/archives/105), [jstat](http://www
 ```
 #返回类型：application/json get
 result=$(curl-G http://www.ss.com)
-if[!-n"$result"];then
+if [! -n "$result" ];then
 	echo"成功！"
 else
 	echo $result
