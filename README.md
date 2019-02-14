@@ -12,7 +12,7 @@
 
 >[Scala相关](https://github.com/jxnu-liguobin/Java-Learning-Summary/tree/master/src/cn/edu/jxnu/scala/Scala.md)
 
->[计算机网络](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/network.md)
+>[计算机网络](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/Network.md)
    
 >[AMQP | RabbitMQ](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/MQ.md)
    
@@ -20,7 +20,7 @@
    
 >[Spring | Mybatis](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/SSM.md)
  
->[Java多线程 | 并发 | 锁](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/%E5%A4%9A%E7%BA%BF%E7%A8%8B.md)
+>[Java多线程 | 并发 | 锁](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/Threads.md)
    
 >[反射 | ASM](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/reflect/ASM.md)
 
@@ -32,7 +32,7 @@
 
 >[Git简单总结](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/Git.md)
 
->[Redis相关](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/redis.md)
+>[Redis相关](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/Redis.md)
    
 >[八大排序算法](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/Sort.md)
    
