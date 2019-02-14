@@ -33,6 +33,8 @@
 
 #### Linux常用命令
 
+```//后面是追加注释```
+
 * 查找文件
 
 ```find / -name filename.txt``` //根据名称查找/目录下的filename.txt文件<br>
