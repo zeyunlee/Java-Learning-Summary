@@ -209,16 +209,16 @@ fi
 
 * 其他命令
 
-        which：which 可执行文件名称（which是通过 PATH环境变量到该路径内查找可执行文件，所以基本的功能是寻找可执行文件 ）
-        whereis：whereis 文件或者目录名称（从数据库文件中查找，不是实时更新）
+```which``` 可执行文件名称（which是通过 PATH环境变量到该路径内查找可执行文件，所以基本的功能是寻找可执行文件 ）
+```whereis``` 文件或者目录名称（从数据库文件中查找，不是实时更新）
         
 * 字符串操作
 
 ```
 var=$(echo "a b (c d)") //用echo的输出赋值给变量
-var2=$(echo $var | tr -d "") //去掉var字符串的空格
-var3=$(echo $var2 | cut -d '(' -f2 | cut -d ')' -f1) // 获取字符串var2中括号()之间的字符串
-最后输出echo $var3：cd
+var2=$(echo $var | tr -d "") //去掉var字符串的空格：ab(cd)
+var3=$(echo $var2 | cut -d '(' -f2 | cut -d ')' -f1) // 获取字符串var2中括号()之间的字符串：cd
+echo $var3 //最后输出：cd
 ```
 
 持续更新中。。。
