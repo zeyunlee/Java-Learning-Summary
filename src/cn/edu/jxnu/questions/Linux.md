@@ -191,8 +191,6 @@ Linux中有三种标准输入输出，分别是 STDIN，STDOUT，STDERR，对应
 
 平常输出日志用的最多的```sh test.sh > test.log 2>&1 &``` 意思是：执行test脚本，并将标准错误也输出到标准输出当中，最后一个&表示在后台执行。
 
-[参考1](https://blog.csdn.net/c19870525/article/details/80756121)|[参考2](https://www.cnblogs.com/is-Tina/p/8697299.html)                                                    
-
 
 #### 其他命令以及脚本代码
 
@@ -279,3 +277,6 @@ ipAddr=${ipPort/:/ } //去掉IP:port中的冒号：
 
 [linux的whoami, who指令](https://www.cnblogs.com/kex1n/p/5216932.html)
 
+[csdn参考](https://blog.csdn.net/c19870525/article/details/80756121)
+
+[cnblogs参考](https://www.cnblogs.com/is-Tina/p/8697299.html)                                                    
