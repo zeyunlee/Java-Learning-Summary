@@ -37,6 +37,8 @@
 >[八大排序算法](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/Sort.md)
 
 >[Linux常用命令](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/Linux.md)
+
+>[自动化测试常用命令](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/AutoTest.md)
    
 ---
 
