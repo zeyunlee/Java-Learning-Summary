@@ -1,5 +1,6 @@
 ### Linux基础
 
+
 #### 工作环境设置文件与环境变量
 
 环境设置文件有两种：系统环境设置文件和个人环境设置文件
@@ -31,6 +32,7 @@
 查看环境变量：```echo $PATH```；
 修改完刷新：```source ~/.bash_profile```，不报错则成功。
 
+
 #### Linux常用命令
 
 ```//后面是追加注释```
@@ -43,6 +45,7 @@
 ```grep -H 'spring' *.xml``` //查找所以有的包含spring的xml文件<br>
 ```find ./ -size 0 | xargs rm -f & ``` //删除文件大小为零的文件<br>
 ```ls -l | grep '.jar'``` //查找当前目录中的所有jar文件<br>
+``` ls -all```  //输出所有文件，并显示文件权限、用户、大小等<br>
 ```grep 'test' d*``` //显示所有以d开头的文件中包含test的行<br>
 ```grep 'test' aa bb cc``` //显示在aa，bb，cc文件中匹配test的行<br>
 ```grep '[a-z]\{5\}' aa``` //显示所有包含每个字符串至少有5个连续小写字符的字符串的行<br>
@@ -96,6 +99,8 @@
 * 修改文件权限
 
 ```chmod 777 file.java``` //file.java的权限-rwxrwxrwx，r表示读、w表示写、x表示可执行
+
+```sudo chown -R 用户:组 ./node_modules``` //修改文件夹./node_modules的权限
 
 * 压缩文件
 
@@ -160,6 +165,13 @@
 
 ```ping www.just-ping.com``` //加参数-t表示持续进行
 
+* 查看IP和MAC地址
+
+Windows：```ipconfig```
+Mac/Linux：```ifconfig``` // 额外参数自查
+
+PS：注意255结尾的IP是Broadcast address，不要误以为这个是IP。
+   
 * 远程登录
 
 ```ssh userName@ip```
@@ -180,6 +192,9 @@ Linux中有三种标准输入输出，分别是 STDIN，STDOUT，STDERR，对应
 平常输出日志用的最多的```sh test.sh > test.log 2>&1 &``` 意思是：执行test脚本，并将标准错误也输出到标准输出当中，最后一个&表示在后台执行。
 
 [参考1](https://blog.csdn.net/c19870525/article/details/80756121)|[参考2](https://www.cnblogs.com/is-Tina/p/8697299.html)                                                    
+
+
+#### 其他命令以及脚本代码
 
 * java 常用命令
 
@@ -219,8 +234,15 @@ fi
 
 * 其他命令
 
-```which``` 可执行文件名称（which是通过 PATH环境变量到该路径内查找可执行文件，所以基本的功能是寻找可执行文件 ）
-```whereis``` 文件或者目录名称（从数据库文件中查找，不是实时更新）
+```which``` //可执行文件名称（which是通过 PATH环境变量到该路径内查找可执行文件，所以基本的功能是寻找可执行文件 ）
+```whereis``` //文件或者目录名称（从数据库文件中查找，不是实时更新）
+```whoami``` //显示自身的用户名称，本指令相当于执行  id -un 指令
+
+    whoami 与 who am i的区别
+    who这个命令重点在用来查看当前有那些用户登录到了本台机器上
+    who -m的作用和who am i的作用是一样的
+    who am i显示的是实际用户的用户名，即用户登陆的时候的用户ID。此命令相当于who -m
+    whoami显示的是有效用户ID ，是当前操作用户的用户名
         
 * 字符串操作
 
@@ -230,22 +252,30 @@ var2=$(echo $var | tr -d "") //去掉var字符串的空格：ab(cd)
 var3=$(echo $var2 | cut -d '(' -f2 | cut -d ')' -f1) // 获取字符串var2中括号()之间的字符串：cd
 echo $var3 //最后输出：cd
 ```
+```
+ipPort="192.168.1.1:80"
+ipAddr=${ipPort/:/ } //去掉IP:port中的冒号：
+```
+
+
+
+
+
+
 
 持续更新中。。。
 
 
 
 
-        
+#### 参考  
+     
 
-* linux命令学习网站:
+[Linux端口被占用的解决(Error: JBoss port is in use. Please check](http://www.hollischuang.com/archives/239)
 
-[linux命令](http://explainshell.com/)
+[linux 中强大且常用命令：find、grep](https://linux.cn/article-1672-1.html)
 
-参考资料：
-
-[Linux端口被占用的解决(Error: JBoss port is in use. Please check](http://www.hollischuang.com/archives/239)|
-[linux 中强大且常用命令：find、grep](https://linux.cn/article-1672-1.html)|
 [mac下安装wget命令](http://www.hollischuang.com/archives/548)
 
-主要是工作中收集的，以及www.hollischuang.com中收录的。
+[linux的whoami, who指令](https://www.cnblogs.com/kex1n/p/5216932.html)
+
