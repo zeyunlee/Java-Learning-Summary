@@ -112,7 +112,14 @@ PS:远程设备 adb -s ip:port shell
 * 发送按键事件
 ```adb shell input keyevent KEYCODE_HOME```
 
+* 显示所有输入法
+```adb shell ime list -s``` //禁用的不显示
 
+* 禁用输入法
+```adb shell ime desable com.sohu.inputmethod.sogouoem/.SogouIME``` //com.sohu.inputmethod.sogouoem/.SogouIME是输入法id，由前面命令得到
+
+* uiautomator传多参数
+```adb shell uiautomator runtest jar包 -c jar中含义监听方法的全类名 -e key1 value1 -e key2 value2```
 
 仅供参考。后续遇到还会补充。。。
             

@@ -250,7 +250,7 @@ fi
 
 ```
 var=$(echo "a b (c d)") //用echo的输出赋值给变量
-var2=$(echo $var | tr -d "") //去掉var字符串的空格：ab(cd)
+var2=$(echo $var | tr -d " ") //去掉var字符串的空格：ab(cd)
 var3=$(echo $var2 | cut -d '(' -f2 | cut -d ')' -f1) // 获取字符串var2中括号()之间的字符串：cd
 echo $var3 //最后输出：cd
 ```
