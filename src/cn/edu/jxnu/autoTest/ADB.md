@@ -31,22 +31,10 @@ adb 命令是 adb 这个程序自带的一些命令
 * sdcard路径
 `````/mnt/sdcard`````
 
-* 实时查看当前正在运行的Activity
-```adb shell logcat | grep ActivityManager```
-
-* 查看当前activity
-```adb shell "dumpsys window | grep mCurrentFocus"```
-
-* 获取当前安卓系统版本，并赋值给变量
-```osVersion=$(adb devices shell getpropro.build.version.release)```
-
 * 设定指定的device
 ```adb -s deviceSerial shell```
 
 PS:远程设备 adb -s ip:port shell
-
-* 查看运行在 Android 设备上的 adb 后台进程
-```adb shell ps | grep adbd```
 
 *  结束 adb 服务、启动 adb 服务
 ```adb kill-server、adb start-server```
@@ -96,8 +84,20 @@ PS:远程设备 adb -s ip:port shell
 * 列出对应包名的 .apk 位置
 ```adb shell pm path com.qu.test```
 
+* 实时查看当前正在运行的Activity
+```adb shell logcat | grep ActivityManager```
+
+* 查看当前activity
+```adb shell "dumpsys window | grep mCurrentFocus"```
+
 * 列出含有单元测试 case 的应用
 ```pm list instrumentation```
+
+* 获取当前安卓系统版本，并赋值给变量
+```osVersion=$(adb devices shell getpropro.build.version.release)```
+
+* 查看运行在 Android 设备上的 adb 后台进程
+```adb shell ps | grep adbd```
 
 * 列出指定应用的 dump 信息
 ```adb shell pm dump com.qu.test```
