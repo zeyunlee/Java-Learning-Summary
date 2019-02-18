@@ -127,10 +127,6 @@ PS:远程设备 adb -s ip:port shell
 ```adb shell uiautomator runtest jar包 -c 含监听方法的全类名 -e key1 value1 -e key2 value2```
 
 仅供参考。后续遇到还会补充。。。
-            
-
-
-  
 
 
 
