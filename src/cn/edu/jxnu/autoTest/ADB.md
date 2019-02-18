@@ -31,9 +31,6 @@ adb 命令是 adb 这个程序自带的一些命令
 * sdcard路径
 `````/mnt/sdcard`````
 
-* 将ADBKeyBoard输入法设置为默认输入法，这里可以直接用adb命令设置
-```adb shell ime set com.android.adbkeyboard/.AdbIME```
-
 * 实时查看当前正在运行的Activity
 ```adb shell logcat | grep ActivityManager```
 
@@ -41,10 +38,10 @@ adb 命令是 adb 这个程序自带的一些命令
 ```adb shell "dumpsys window | grep mCurrentFocus"```
 
 * 获取当前安卓系统版本，并赋值给变量
-```osVersion=$($adb$devicesshellgetpropro.build.version.release)```
+```osVersion=$(adb devices shell getpropro.build.version.release)```
 
 * 设定指定的device
-```adb -s deviceId shell```
+```adb -s deviceSerial shell```
 
 PS:远程设备 adb -s ip:port shell
 
@@ -56,10 +53,12 @@ PS:远程设备 adb -s ip:port shell
 
 * 安装app
 ```adb install``` //覆盖安装是使用 -r 选项，目标 apk 存放于 PC 端，请用 adb install 安装
+
 ```pm install``` //adb shell 命令，目标 apk 存放于 Android 设备上，请用 pm install 安装
 
 * 卸载应用
 ```adb uninstall``` //后面跟的参数是应用的包名（特别注意），-k 选项，卸载时保存数据和缓存目录
+
 ```pm uninstall``` //同上安装
 
 * 重启 Android 设备
@@ -67,6 +66,7 @@ PS:远程设备 adb -s ip:port shell
 
 * 进入 fastboot 模式
 ```bootloader、adb reboot-bootloader``` //进入 fastboot 模式
+
 ```recovery``` //进入 recovery 模式
 
 * 将宿主机上的某个端口重定向到设备的某个端口
@@ -84,12 +84,14 @@ PS:远程设备 adb -s ip:port shell
 *  列出安装在设备上的应用
 ```adb shell pm list package``` //显示的是 package:包名
     
+    ```
     -s：列出系统应用
     -3：列出第三方应用
     -f：列出应用包名及对应的apk名及存放位置
     -i：列出应用包名及其安装来源
+    ```
     
-```adb shell pm list package -f -3 -i qu``` //过滤关键字，可以很方便地查找自己想要的应用
+```adb shell pm list package -f -3 -i qutest``` //过滤关键字，可以很方便地查找自己想要的应用
 
 * 列出对应包名的 .apk 位置
 ```adb shell pm path com.qu.test```
@@ -118,17 +120,17 @@ PS:远程设备 adb -s ip:port shell
 * 禁用输入法
 ```adb shell ime desable com.sohu.inputmethod.sogouoem/.SogouIME``` //com.sohu.inputmethod.sogouoem/.SogouIME是输入法id，由前面命令得到
 
+* 将ADBKeyBoard输入法设置为默认输入法
+```adb shell ime set com.android.adbkeyboard/.AdbIME```
+
 * uiautomator传多参数
-```adb shell uiautomator runtest jar包 -c jar中含义监听方法的全类名 -e key1 value1 -e key2 value2```
+```adb shell uiautomator runtest jar包 -c 含监听方法的全类名 -e key1 value1 -e key2 value2```
 
 仅供参考。后续遇到还会补充。。。
             
 
 
-
   
-
-
 
 
 
