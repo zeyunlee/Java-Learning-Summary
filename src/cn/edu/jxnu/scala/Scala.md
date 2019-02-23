@@ -20,7 +20,7 @@ loading
 
 [自動化測試平台](https://github.com/LightSwordSpringBoot/lightsword)
 
-[Circumflex — lightweight Scala-based Web framework and ORM](https://github.com/jxnu-liguobin/circumflex)
+[Circumflex — lightweight Scala-based Web framework and ORM](https://github.com/inca/circumflex)
 
 [Scala-Akka 简单爬虫](https://github.com/jxnu-liguobin/akka-crawler-example)
 
