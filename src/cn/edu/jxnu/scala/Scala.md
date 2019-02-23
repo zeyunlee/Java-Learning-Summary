@@ -22,14 +22,21 @@ loading
 
 [Circumflex — lightweight Scala-based Web framework and ORM](https://github.com/jxnu-liguobin/circumflex)
 
+[Scala-Akka 简单爬虫](https://github.com/jxnu-liguobin/akka-crawler-example)
+
 loading
 
 #### 鸣谢 ####
+
+>以上Fork的原作者
 
 >playscala.cn社区博主
 
 >[guodongxiaren markdown语法 ](https://github.com/guodongxiaren/README/blob/master/README.md)
 
+>Java并发编程网
+
 >伟大的网友
+
 
 
