@@ -99,6 +99,6 @@ class ShoppingCart extends Actor {
 }
 
 ```
-![生命周期](https://github.com/jxnu-liguobin/Java-Learning-Summary/tree/master/scala-akka-learn/src/main/scala/cn/edu/jxnu/akka/pictues/actor1.png)
+![生命周期](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/scala-akka-learn/src/main/scala/cn/edu/jxnu/akka/pictures/actor1.png)
 
 [超详细Java版Actor的讲解](http://ifeve.com/akka-doc-java-untyped-actors/)
