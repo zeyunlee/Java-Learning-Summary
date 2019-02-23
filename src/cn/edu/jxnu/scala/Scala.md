@@ -30,9 +30,9 @@ loading
 
 >以上Fork的原作者
 
->playscala.cn社区博主
+>playscala.cn社区
 
->[guodongxiaren markdown语法 ](https://github.com/guodongxiaren/README/blob/master/README.md)
+>Github:guodongxiaren
 
 >Java并发编程网
 
