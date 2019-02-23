@@ -126,6 +126,12 @@ PS:远程设备 adb -s ip:port shell
 * uiautomator传多参数
 ```adb shell uiautomator runtest jar包 -c 含监听方法的全类名 -e key1 value1 -e key2 value2```
 
+* 关闭app
+```adb shell am force-stop $packageName``` //app包名
+
+* 输入
+```adb shell input keyevent 3``` //3是键对应的值
+
 仅供参考。后续遇到还会补充。。。
 
 
