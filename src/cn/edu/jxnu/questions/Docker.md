@@ -71,43 +71,43 @@
 
 ```docker push username/repository:tag```
 
-* 16.从registry运行指定的镜像
+* 17.从registry运行指定的镜像
 
 ```docker run username/repository:tag```
 
 如果你没有在这些命令中指定 ``` :tag ``` 部分，在你生成和运行镜像时，最新的tag ``` :latest ``` 会被默认使用。 
 如果没有指定tag，Docker会使用最新的镜像版本，即latest（所以不指定会坑爹）
 
-* 17.查看镜像的详细信息bcb31f80b037是镜像的id
+* 18.查看镜像的详细信息bcb31f80b037是镜像的id
 
 ```docker inspect IMAGE```
 
-* 18.添加squid的证书
+* 19.添加squid的证书
 
 ```sudo htpasswd -c squid_passwd  dreamylost```
 
-* 19.push文件到docker的某个容器中
+* 20.push文件到docker的某个容器中
 
 ```sudo docker cp squid.conf  CONTAINER_ID:/etc/squid```
 
-* 20.进入运行的容器
+* 21.进入运行的容器
 
 ```sudo docker exec -it CONTAINER_ID /bin/bash``` //可能有镜像的多个实例，需要指定运行的容器ID，而不是镜像ID
 
-* 21.查看docker的端口映射
+* 22.查看docker的端口映射
 
 ```docker port  CONTAINER_ID```
 
-* 22.给容器安装vi命令
+* 23.给容器安装vi命令
 
 1. ```apt-get update``` //同步 ```/etc/apt/sources.list``` 和 ```/etc/apt/sources.list.d```中列出的源的索引 
 2. ```apt-get install vim``` //安装命令，其他类似（先登录进指定运行的容器，关闭容器则失效）
 
-* 23.查看squid代理的链接访问日志
+* 24.查看squid代理的链接访问日志
 
 ```/var/log/squid/access.log```
 
-* 24.安装Apache
+* 25.安装Apache
 
 ```apt-get install apache2=2.4.29-1ubuntu4.5```
 
