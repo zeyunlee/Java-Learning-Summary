@@ -45,7 +45,7 @@
 
 * 10.强行关闭指定的容器 
 
-```docker kill CONTAINER_ID```
+```docker kill CONTAINER_ID``` //CONTAINER_ID是容器ID
 
 * 11.从这台机器上移除指定的容器
 
@@ -96,7 +96,7 @@
 
 * 20.push文件到docker的某个容器中
 
-```sudo docker cp squid.conf  CONTAINER_ID:/etc/squid``` //CONTAINER_ID是容器ID
+```sudo docker cp squid.conf  CONTAINER_ID:/etc/squid```
 
 * 21.进入运行的容器
 
