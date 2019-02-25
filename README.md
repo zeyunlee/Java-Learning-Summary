@@ -35,7 +35,7 @@
 - [Linux常用命令](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/Linux.md)
 - [常用ADB命令](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/autoTest/ADB.md)
 - [常用Postman命令](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/autoTest/Postman.md)
-- [常用Docker命令](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/autoTest/Docker.md)
+- [常用Docker命令](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/Docker.md)
 ---
 
 ### Scala大法
@@ -55,7 +55,7 @@
 - [Scala-Akka 简单爬虫](https://github.com/jxnu-liguobin/akka-crawler-example)
 ---
 
-#### 鸣谢 ####
+### 鸣谢 ####
 
 * 以上Fork的原作者
 * playscala.cn社区
