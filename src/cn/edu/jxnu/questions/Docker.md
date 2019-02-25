@@ -47,75 +47,67 @@
 
 ```docker kill CONTAINER_ID``` //CONTAINER_ID是容器ID
 
-* 11.从这台机器上移除指定的容器
-
-```docker rm IMAGE```
-
-* 12.从这台机器上移除所有的容器
+* 11.从这台机器上移除所有的容器
 
 ```docker rm $(docker ps -a -q)```
 
-* 13.显示这台机器上的所有镜像
+* 12.显示这台机器上的所有镜像
 
 ```docker images -a```
 
-* 14.从本机移除指定的镜像
-
-```docker rmi IMAGE```
-
-* 15.从本机移除所有的镜像
+* 13.从本机移除所有的镜像
 
 ```docker rmi $(docker s -q)```
 
-* 16.使用Docker credentials 登录到CLI会话
+* 14.使用Docker credentials 登录到CLI会话
 
 ```docker login```
 
-* 17.给镜像打一个tag，为了可以上传到remote的registry
+* 15.给镜像打一个tag，为了可以上传到remote的registry
 
 ```docker tag <> username/repository:tag```
 
-* 18.上传打完tag的镜像到remote的registry
+* 16.上传打完tag的镜像到remote的registry
 
 ```docker push username/repository:tag```
 
-* 19.从registry运行指定的镜像
+* 16.从registry运行指定的镜像
 
 ```docker run username/repository:tag```
 
 如果你没有在这些命令中指定 ``` :tag ``` 部分，在你生成和运行镜像时，最新的tag ``` :latest ``` 会被默认使用。 
 如果没有指定tag，Docker会使用最新的镜像版本，即latest（所以不指定会坑爹）
 
-* 20.查看镜像的详细信息bcb31f80b037是镜像的id
+* 17.查看镜像的详细信息bcb31f80b037是镜像的id
 
 ```docker inspect IMAGE```
 
-* 20.添加squid的证书
+* 18.添加squid的证书
 
 ```sudo htpasswd -c squid_passwd  dreamylost```
 
-* 20.push文件到docker的某个容器中
+* 19.push文件到docker的某个容器中
 
 ```sudo docker cp squid.conf  CONTAINER_ID:/etc/squid```
 
-* 21.进入运行的容器
+* 20.进入运行的容器
 
 ```sudo docker exec -it CONTAINER_ID /bin/bash``` //可能有镜像的多个实例，需要指定运行的容器ID，而不是镜像ID
 
-* 22.查看docker的端口映射
+* 21.查看docker的端口映射
 
 ```docker port  CONTAINER_ID```
 
-* 23.给容器安装vi命令
+* 22.给容器安装vi命令
 
 1. ```apt-get update``` //同步 ```/etc/apt/sources.list``` 和 ```/etc/apt/sources.list.d```中列出的源的索引 
 2. ```apt-get install vim``` //安装命令，其他类似（先登录进指定运行的容器，关闭容器则失效）
 
-* 24.查看squid代理的链接访问日志
+* 23.查看squid代理的链接访问日志
 
 ```/var/log/squid/access.log```
 
-* 25.安装Apache
+* 24.安装Apache
 
 ```apt-get install apache2=2.4.29-1ubuntu4.5```
 
