@@ -43,7 +43,7 @@
 > 编程基础
  
 - [Scala-语法基础](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/scala/ScalaBasic.md)
-- [Scala-常用工具|配置类](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/scala/ScalaUtil.md)
+- [Scala-常用工具、配置类](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/scala/ScalaUtil.md)
 - [Scala-Akka基础](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/scala/ScalaAkkaBasic.md)
 
 > 应用实践
