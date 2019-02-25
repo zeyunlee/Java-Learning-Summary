@@ -14,14 +14,14 @@
 - [剑指offer多种解法、编程之美、笔试题](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/practice)
 - [Java For Leetcode](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/leetcode)
 - [Scala For Leetcode](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/leetcode/scala) 
-- [AMQP | RabbitMQ](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/MQ.md)
-- [Spring | Mybatis](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/SSM.md)
+- [AMQP、RabbitMQ](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/MQ.md)
+- [Spring、Mybatis](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/SSM.md)
 - [Redis相关](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/Redis.md)
 ---
 
 ### 编程附加
 
-- [反射 | ASM](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/reflect/ASM.md)
+- [反射、ASM](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/reflect/ASM.md)
 - [JDK8常用类源码解析](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/sourcecode/sourcecode.md)
 - [Java虚拟机相关代码](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/JVM.md)
 - [Java内存模型](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/JMM.md)
