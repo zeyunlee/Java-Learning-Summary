@@ -90,7 +90,7 @@
 
 ```docker inspect IMAGE```
 
-* 20.添加sqluid的证书
+* 20.添加squid的证书
 
 ```sudo htpasswd -c squid_passwd  dreamylost```
 
