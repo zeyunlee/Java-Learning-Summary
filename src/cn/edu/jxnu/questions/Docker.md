@@ -23,7 +23,7 @@
 
 ```docker build -t```
 
-* 5.运行镜像，并且映射主机端口12345 到容器端口 3128
+* 5.运行镜像，并且映射主机端口12345 到容器端口 3128（默认）
 
 ```docker run -p 12345:3128```  //是镜像ID，下同
 
@@ -37,7 +37,7 @@
 
 * 8.优雅的停止运行指定的容器
 
-```docker stop```
+```docker stop IMAGE```
 
 * 9.查看所有的容器列表，包括没有在运行的
 
@@ -45,7 +45,7 @@
 
 * 10.强行关闭指定的容器 
 
-```docker kill```
+```docker kill CONTAINER_ID```
 
 * 11.从这台机器上移除指定的容器
 
@@ -94,7 +94,7 @@
 
 ```sudo htpasswd -c squid_passwd  dreamylost```
 
-* 20.push文件到docker
+* 20.push文件到docker的某个容器中
 
 ```sudo docker cp squid.conf  CONTAINER_ID:/etc/squid``` //CONTAINER_ID是容器ID
 
@@ -118,3 +118,6 @@
 * 25.安装Apache
 
 ```apt-get install apache2=2.4.29-1ubuntu4.5```
+
+
+PS:镜像可以理解是已经打包的开放包，容器是包的一次执行，与运行时相关的一般都使用容器CONTAINER_ID
