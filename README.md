@@ -3,16 +3,15 @@
 ### 编程基础
 
 - [计算机网络](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/Network.md)
-- [SQL | MySQL](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/MySQL.md)
+- [SQL、MySQL](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/MySQL.md)
 - [操作系统](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/OS.md)
-- [Java锁 | 线程 | 并发](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/Threads.md)
-- [Java内存模型](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/JMM.md)
+- [Java线程基础](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/Threads.md)
 - [八大排序算法](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/Sort.md)
 ---
 
 ### 试题
 
-- [剑指offer多种解法 | 编程之美 | 笔试题](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/practice)
+- [剑指offer多种解法、编程之美、笔试题](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/practice)
 - [Java For Leetcode](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/leetcode)
 - [Scala For Leetcode](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/leetcode/scala) 
 - [AMQP | RabbitMQ](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/MQ.md)
@@ -25,6 +24,9 @@
 - [反射 | ASM](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/reflect/ASM.md)
 - [JDK8常用类源码解析](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/sourcecode/sourcecode.md)
 - [Java虚拟机相关代码](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/JVM.md)
+- [Java内存模型](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/JMM.md)
+- [AbstractQueuedSynchronizer分析](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/AQS.md)
+- [StampedLock分析](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/StampedLock.md)
 ---
 
 ### 常用命令
@@ -32,6 +34,8 @@
 - [Git简单总结](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/Git.md)
 - [Linux常用命令](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/Linux.md)
 - [自动化测试常用命令](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/AutoTest.md)
+- [常用ADB命令](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/autoTest/ADB.md)
+- [常用Postman命令](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/autoTest/Postman.md)
 ---
 
 ### Scala大法
