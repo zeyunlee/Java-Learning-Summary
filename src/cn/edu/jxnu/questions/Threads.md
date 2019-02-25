@@ -1,7 +1,5 @@
 # 主要内容
 
-左转[Java内存模型](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/JMM.md)
-
 右转[AbstractQueuedSynchronizer 分析](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/AQS.md)
 
 后转[StampedLock分析](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/questions/StampedLock.md)
