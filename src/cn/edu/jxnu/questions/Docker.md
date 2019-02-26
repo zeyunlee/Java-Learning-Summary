@@ -13,7 +13,7 @@
   
 * 2.安装linux 
 
-```docker pull centos:6```
+```docker pull centos:6``` //6是版本号
 
 * 3.查看所有的镜像，也包括tag在里面 
 
@@ -47,7 +47,7 @@
 
 ```docker kill CONTAINER_ID``` //CONTAINER_ID是容器ID
 
-* 11.从这台机器上移除所有的容器
+* 11.从这台机器上移除所有未运行的容器
 
 ```docker rm $(docker ps -a -q)```
 
@@ -57,7 +57,7 @@
 
 * 13.从本机移除所有的镜像
 
-```docker rmi $(docker s -q)```
+```docker rmi $(docker images -q)```
 
 * 14.使用Docker credentials 登录到CLI会话
 
