@@ -105,7 +105,7 @@
 
 * 24.查看squid代理的链接访问日志
 
-```/var/log/squid/access.log```
+```tail -f /var/log/squid/access.log```
 
 * 25.安装Apache
 
