@@ -297,11 +297,11 @@ InnoDB主要特性
 
 InnoDB:
 
-![](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/practice/picture/InnoDB.png)
+![](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/practice/picture/Innodb.png)
 
 MyISAM:
 
-![](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/practice/picture/MyISAM.png)
+![](https://github.com/jxnu-liguobin/Java-Learning-Summary/blob/master/src/cn/edu/jxnu/practice/picture/myisam.png)
 
 ### 9、索引的分类（主键索引、唯一索引），最左前缀原则，哪些情况索引会失效？
 
