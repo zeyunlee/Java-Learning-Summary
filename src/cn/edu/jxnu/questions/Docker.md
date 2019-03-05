@@ -112,36 +112,37 @@
 ```apt-get install apache2=2.4.29-1ubuntu4.5``` //后面是版本号
 
 
-* 将本地目录挂载到docker容器上
+* 26.将本地目录挂载到docker容器上
 
-```docker run -i -t -v /Users/xx:/etc/squid3 b51686290574 /bin/bash``` //docker run -i -t -v 本地绝对路径:docker上绝对路径 镜像ID  /bin/bash
+```docker run -i -t -v /Users/xx:/etc/squid3 b51686290574 /bin/bash``` 
+//docker run -i -t -v 本地绝对路径:docker上绝对路径 镜像ID  /bin/bash
 
-* 加端口映射
+* 27.加端口映射
 
 docker run  -p12345:3128 -i -t -v  /Users/liguobin:/etc/squid3 IMAGE /bin/bash
 
-* 拷贝docker的文件到本地
+* 28.拷贝docker的文件到本地
 
 ```docker cp CONTAINER_ID:/etc/squid3/squid.conf /Users/xx/xx```
 
-* 本地文件拷贝到docker
+* 29.本地文件拷贝到docker
 
 docker cp 本地路径 容器ID:容器路径
 
-* 使用本地配置文件启动squid代理
+* 30.使用本地配置文件启动squid代理
 
 ```docker run -p 3128:3128 -i -t -v /Users/liguobin:/etc/squid3 IMAGE```
 
-* 进入正则运行的容器，并执行命令
+* 31.进入正则运行的容器，并执行命令
 
 ```docker exec -it CONTAINER_ID /bin/bash-c "ls"``` //ls是需要执行的命令
 
-* 推送到私服
+* 32.推送到私服
 
 ```docker push 192.168.x.x:5000/docker-repo/squid:3.3.8-14```
 
 
-* docker的运行开启HTTP配置
+* 33.docker的运行开启HTTP配置
 
 /Users/xx/.docker/daemon.json //使用安装包安装的
 
@@ -155,7 +156,7 @@ docker cp 本地路径 容器ID:容器路径
 }
 ```
 
-* 查看寺库的镜像
+* 34.查看寺库的镜像
 
 ```curl 192.168.x.x:5000/v2/_catalog```
 
