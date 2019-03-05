@@ -13,7 +13,7 @@
   
 * 2.安装linux 
 
-```docker pull centos:6```
+```docker pull centos:6``` //6是版本号
 
 * 3.查看所有的镜像，也包括tag在里面 
 
@@ -47,7 +47,7 @@
 
 ```docker kill CONTAINER_ID``` //CONTAINER_ID是容器ID
 
-* 11.从这台机器上移除所有的容器
+* 11.从这台机器上移除所有未运行的容器
 
 ```docker rm $(docker ps -a -q)```
 
@@ -57,7 +57,7 @@
 
 * 13.从本机移除所有的镜像
 
-```docker rmi $(docker s -q)```
+```docker rmi $(docker images -q)```
 
 * 14.使用Docker credentials 登录到CLI会话
 
@@ -78,7 +78,7 @@
 如果你没有在这些命令中指定 ``` :tag ``` 部分，在你生成和运行镜像时，最新的tag ``` :latest ``` 会被默认使用。 
 如果没有指定tag，Docker会使用最新的镜像版本，即latest（所以不指定会坑爹）
 
-* 18.查看镜像的详细信息bcb31f80b037是镜像的id
+* 18.查看镜像的详细信息
 
 ```docker inspect IMAGE```
 
@@ -105,7 +105,7 @@
 
 * 24.查看squid代理的链接访问日志
 
-```/var/log/squid/access.log```
+```tail -f /var/log/squid/access.log``` //根据版本可能是squid3
 
 * 25.容器内的Linux安装Apache
 
