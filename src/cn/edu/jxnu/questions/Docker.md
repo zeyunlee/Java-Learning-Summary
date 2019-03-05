@@ -119,7 +119,7 @@
 
 * 27.加端口映射
 
-docker run  -p12345:3128 -i -t -v  /Users/liguobin:/etc/squid3 IMAGE /bin/bash
+```docker run  -p12345:3128 -i -t -v  /Users/xx:/etc/squid3 IMAGE /bin/bash```
 
 * 28.拷贝docker的文件到本地
 
@@ -131,7 +131,7 @@ docker cp 本地路径 容器ID:容器路径
 
 * 30.使用本地配置文件启动squid代理
 
-```docker run -p 3128:3128 -i -t -v /Users/liguobin:/etc/squid3 IMAGE```
+```docker run -p 3128:3128 -i -t -v /Users/xx:/etc/squid3 IMAGE```
 
 * 31.进入正则运行的容器，并执行命令
 
@@ -156,7 +156,7 @@ docker cp 本地路径 容器ID:容器路径
 }
 ```
 
-* 34.查看寺库的镜像
+* 34.查看私有库的镜像
 
 ```curl 192.168.x.x:5000/v2/_catalog```
 
