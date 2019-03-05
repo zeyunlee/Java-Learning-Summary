@@ -114,12 +114,12 @@
 
 * 26.将本地目录挂载到docker容器上
 
-```docker run -i -t -v /Users/xx:/etc/squid3 b51686290574 /bin/bash``` 
+```docker run -i -t -v /Users/xx:/etc/squid3 IMAGE /bin/bash``` 
 //docker run -i -t -v 本地绝对路径:docker上绝对路径 镜像ID  /bin/bash
 
 * 27.加端口映射
 
-```docker run  -p12345:3128 -i -t -v  /Users/xx:/etc/squid3 IMAGE /bin/bash```
+```docker run  -p 12345:3128 -i -t -v  /Users/xx:/etc/squid3 IMAGE /bin/bash```
 
 * 28.拷贝docker的文件到本地
 
