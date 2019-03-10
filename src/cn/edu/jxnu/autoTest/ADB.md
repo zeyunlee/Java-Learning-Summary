@@ -132,6 +132,17 @@ PS:远程设备 adb -s ip:port shell
 * 输入
 ```adb shell input keyevent 3``` //3是键对应的值
 
+* 设置代理
+```adb shell settings put global http_proxy ip:port```
+
+* 移除代理
+```
+adb shell settings delete global http_proxy
+adb shell settings delete global global_http_proxy_host
+adb shell settings delete global global_http_proxy_port 
+```
+//移除必须在重启后生效
+
 仅供参考。后续遇到还会补充。。。
 
 
